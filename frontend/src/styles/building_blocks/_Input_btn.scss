@@ -1,0 +1,9 @@
+@import "../shared";
+
+div.input_and_btn {
+  button {
+    &:hover {
+      color: white;
+    }
+  }
+}

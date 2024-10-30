@@ -1,0 +1,57 @@
+@import "../styles/_shared.scss";
+
+div.participants_selection,
+div.indicate_position,
+button.btn-outline-prime-white {
+  button {
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+button.btn-outline-prime-white {
+  &:hover {
+    color: white;
+  }
+}
+
+div.position_indicators {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+
+  row-gap: 15px;
+}
+
+section.set_candidates {
+  & > div {
+    position: relative;
+
+    div.label {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      background-color: tint-color($prime, 85%);
+      padding-inline: 5px;
+    }
+  }
+}
+
+div.select_participants {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba($color: shade-color($prime, 75%), $alpha: 0.5);
+  z-index: 5;
+  div.holder {
+    width: 85%;
+    height: 75%;
+    max-width: 600px;
+  }
+}
+
+select.time_selector {
+  width: -moz-fit-content;
+  width: fit-content;
+}

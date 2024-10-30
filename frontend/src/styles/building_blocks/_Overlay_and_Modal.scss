@@ -1,0 +1,11 @@
+@import "../shared";
+div.overlay {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background-color: rgba($color: shade-color($prime, 75%), $alpha: 0.4);
+  z-index: 5;
+  div.holder {
+    width: 85%;
+    background-color: white;
+  }
+}

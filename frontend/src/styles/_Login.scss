@@ -1,0 +1,10 @@
+@import "./_shared.scss";
+
+section.form_section {
+  // background-color: tint-color($gra);
+  background-color: tint-color($prime, 75%);
+  & > div.container {
+    height: 95vh;
+    max-width: 780px;
+  }
+}

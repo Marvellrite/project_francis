@@ -1,0 +1,19 @@
+div.modal_blur {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+
+  div.modal_holder {
+    width: 85%;
+    height: 85%;
+    margin: auto;
+    max-width: 896px;
+
+    div.modal_content {
+      background-color: white;
+    }
+  }
+}

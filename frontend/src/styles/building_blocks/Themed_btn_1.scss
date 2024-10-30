@@ -1,0 +1,43 @@
+@import "../_shared.scss";
+
+button.themed_btn_prime:not(.btn-prime) {
+  background-color: $prime;
+  color: white;
+  &.btn-prime {
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: white;
+    color: $prime;
+  }
+}
+button.themed_btn_prime.btn-prime {
+  &:not(:hover) {
+    background-color: $prime;
+    color: white;
+  }
+  &:hover {
+    color: white;
+  }
+}
+
+button.themed_btn_outlined_prime {
+  background-color: white;
+  color: $prime;
+
+  &:hover {
+    background-color: $prime;
+    color: white;
+  }
+}
+
+button.themed_btn_outlined_show_prime {
+  background-color: white;
+  color: $prime;
+
+  &:hover {
+    background-color: $prime;
+    color: white;
+  }
+}

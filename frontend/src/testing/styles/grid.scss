@@ -1,0 +1,28 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.root {
+  min-height: 100vh;
+}
+
+.container {
+  width: 70%;
+  background-color: rgb(178, 187, 164);
+  display: grid;
+  grid-template-columns: 100px 3fr 100px;
+  grid-template-rows: repeat(2, 100px);
+  justify-items: center;
+  align-items: center;
+
+  & > div {
+    background-color: rgb(231, 160, 66);
+    border: 3px rgb(165, 113, 45) solid;
+    height: 40px;
+    width: 40px;
+  }
+}

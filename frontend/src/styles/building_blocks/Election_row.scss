@@ -1,0 +1,10 @@
+@import "../_shared.scss";
+
+button.vote_btn {
+  color: $prime;
+  border-color: $prime;
+  &:hover {
+    color: white;
+    background-color: $prime;
+  }
+}

@@ -1,0 +1,14 @@
+@import "../_shared.scss";
+
+div.position_indicator {
+  background-color: tint-color($prime, 85%) !important;
+  color: $prime !important;
+  display: flex;
+  align-items: baseline;
+  width: -moz-fit-content;
+  width: fit-content;
+
+  button.btn-close {
+    background-image: none;
+  }
+}

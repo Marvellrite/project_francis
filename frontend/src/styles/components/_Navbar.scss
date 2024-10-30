@@ -1,0 +1,34 @@
+@import "../_shared.scss";
+
+nav {
+  width: 70%;
+  height: 100vh;
+  padding-top: 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  div.navlink_holder {
+    a.active {
+      background-color: $prime;
+      color: white !important;
+    }
+    a:hover:not(.active) {
+      background-color: tint-color($prime, 85%);
+      color: white;
+    }
+    // border: ;
+    svg {
+      font-size: 1.5em;
+    }
+    & {
+      font-size: 1.1em;
+    }
+    span {
+      display: flex;
+      align-items: center;
+      &.icon_span {
+        padding: 0.3rem 1rem;
+      }
+    }
+  }
+}

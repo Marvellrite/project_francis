@@ -1,0 +1,16 @@
+@import "../_shared.scss";
+
+button.close_btn {
+  background-image: none;
+
+  & > svg {
+    font-size: large;
+  }
+
+  &:active,
+  &:focus {
+    box-shadow: none;
+    border: none;
+    color: $prime;
+  }
+}

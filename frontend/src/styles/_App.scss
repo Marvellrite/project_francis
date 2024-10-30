@@ -1,0 +1,32 @@
+@import "./_shared.scss";
+
+div.NavBarAided {
+  //   background-color: tint-color($prime, 85%);
+  min-height: 100vh;
+
+  div.header_separator {
+    height: 4rem;
+  }
+
+  div.outlet_holder {
+    background-color: tint-color($prime, 90%);
+    height: 100%;
+    border-radius: 10px;
+
+    & > * {
+      max-width: 804px;
+      margin-inline: auto;
+    }
+  }
+
+  & > div.d-flex.flex-column {
+    min-height: 100vh;
+    margin-left: 320px;
+    padding-top: 4rem;
+
+    @include media-breakpoint-down(lg) {
+      margin-left: 0;
+      padding-top: 0;
+    }
+  }
+}

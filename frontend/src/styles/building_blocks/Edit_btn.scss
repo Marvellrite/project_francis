@@ -1,0 +1,12 @@
+@import "../_shared.scss";
+
+button.edit_btn {
+  background-image: none;
+
+  &:active,
+  &:focus {
+    box-shadow: none;
+    border: none;
+    color: $prime;
+  }
+}

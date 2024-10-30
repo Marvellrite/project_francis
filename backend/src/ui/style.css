@@ -1,0 +1,19 @@
+a{
+    padding: 0.4em 0.7em;
+    color: whitesmoke;
+    font-weight: bold;
+    background-color: rgb(78, 3, 148);
+    border-radius: 3px;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: rgb(66, 66, 66);
+
+}
+
+.aHolder{
+    text-align: center;
+    margin-top: 40vh;
+}

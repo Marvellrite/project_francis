@@ -1,0 +1,8 @@
+@import "./_shared";
+
+div.hosted_by_you {
+  span.title {
+    background-color: tint-color($prime, 85%);
+    width: initial;
+  }
+}

@@ -1,0 +1,15 @@
+@import "../shared";
+
+table.elections_1 {
+  //   min-width: 410px;
+  thead th {
+    background-color: $prime;
+    color: white;
+  }
+  tbody > tr > * {
+    vertical-align: bottom;
+  }
+  & > :not(caption, th:first-child) {
+    text-align: center;
+  }
+}
