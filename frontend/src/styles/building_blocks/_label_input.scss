@@ -1,7 +1,7 @@
 @import "../../styles/_shared.scss";
 
 div.Label_input {
-  div.form-control:focus-within {
+  &:focus-within {
     --input-box-shadow: $input-focus-box-shadow;
     box-shadow: $input-focus-box-shadow;
   }

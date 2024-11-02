@@ -21,7 +21,7 @@ const Overlay_and_Modal: FC<Overlay_and_Modal_type> = ({
   loader = false,
 }) => {
   return (
-    <div className=" vh-100 vw-100 position-fixed top-0 start-0 overlay">
+    <div className=" h-100 w-100 position-absolute top-0 start-0 overlay">
       <div className="w-100 h-100 d-flex justify-content-center align-items-center">
         <div
           className="holder rounded-2 px-3"

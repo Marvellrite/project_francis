@@ -14,7 +14,7 @@ const Table_1: FC<Table_1_type> = ({
 }) => {
   return (
     <div className=" table-responsive">
-      <table className="table elections_1">
+      <table className="table elections_1 table-bordered">
         {caption_title && (
           <caption className=" caption-top mb-2">
             <span className=" fw-semibold">{caption_title}</span>{" "}
