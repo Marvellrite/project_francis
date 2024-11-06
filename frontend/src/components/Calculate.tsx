@@ -33,7 +33,7 @@ const Register = () => {
     <section className="form_section d-flex vh-100 align-items-center">
       <div className="container shadow-sm rounded bg-white position-relative">
         <div className="border border-2 border-prime border-top-0 border-bottom-0 h-100 overflow-y-auto">
-          {false ? (
+          {true ? (
             <div className="pt-4">
               <div className="col-12 text-center">
                 <span className=" fw-bold">Name:</span>{" "}

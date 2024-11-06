@@ -2,7 +2,7 @@ import "./styles/_App.scss";
 import "./styles/_shared.scss";
 
 import Login from "./components/Login.tsx";
-import Register from "./components/Register.tsx";
+import Register from "./components/Calculate.tsx";
 // import Navbar from "./components/Navbar.tsx";
 
 import {
