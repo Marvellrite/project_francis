@@ -1,5 +1,6 @@
 import { FC, ReactNode } from "react";
 import "../../styles/building_blocks/Themed_btn_1.scss";
+import { MouseEventHandler } from "react";
 
 type Themed_btn_type = {
   btn_text: string | ReactNode;
@@ -9,6 +10,7 @@ type Themed_btn_type = {
   bg_secondary?: boolean;
   theme_class?: string;
   type: "submit" | "button" | "reset" | undefined;
+  onClick?: MouseEventHandler<HTMLButtonElement>
 };
 
 const Themed_btn: FC<Themed_btn_type> = ({
@@ -18,9 +20,10 @@ const Themed_btn: FC<Themed_btn_type> = ({
   sm,
   bg_color,
   type = "button",
+  onClick
 }) => {
   return (
-    <button
+    <button onClick={onClick}
       type={type}
       className={`btn btn${
         sm && "-sm"

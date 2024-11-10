@@ -1,13 +1,15 @@
 import "../../styles/building_blocks/_label_input.scss";
 import "../../styles/_shared.scss";
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 
 type label_input_type = {
   placeholder?: string;
-  unit?: string;
+  unit?: ReactNode|string;
   type: string;
   id?: string;
+  name?:string,
   required: boolean;
+  value:number|string
 };
 
 const Label_input_2: FC<label_input_type> = ({
@@ -16,6 +18,8 @@ const Label_input_2: FC<label_input_type> = ({
   type,
   id,
   required = false,
+  name,
+  value = 0
 }) => {
   return (
     <div className="d-flex align-items-center form-control p-0 pe-2 Label_input">
@@ -24,7 +28,9 @@ const Label_input_2: FC<label_input_type> = ({
         id={id}
         className="form-control"
         type={type}
+        name={name}
         required={required}
+        defaultValue={eval(value.toString())}
       />{" "}
       <div>{unit}</div>
     </div>

@@ -5,7 +5,7 @@ import "../../styles/components/bordered_title_container_2.scss";
 type placeholder_3_type = {
   children: ReactNode;
   className?: string;
-  title: string;
+  title: ReactNode;
   border_color?: string;
 };
 

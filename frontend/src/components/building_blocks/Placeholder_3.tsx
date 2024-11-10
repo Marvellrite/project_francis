@@ -26,7 +26,7 @@ const Placeholder_3: FC<placeholder_3_type> = ({
             <div>
               <button
                 className="btn p-0"
-                style={{ fontSize: "1.2rem", color: "inherit" }}>
+                style={{ fontSize: "0.8rem", color: "inherit" }}>
                 &#9660;
               </button>
             </div>

@@ -1,21 +1,25 @@
-import { useCallback, useState, useEffect } from "react";
+import { useCallback, useState } from "react";
 
 type valuesType = {
   url: string;
-  inputValues: string;
+  inputValues: {[key:string]:string};
 };
 
-const useSubmitandReceive = (values: valuesType) => {
-  // const {url, inputValues} = values;
-
+const useSubmitandReceive = (url: string) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [data, setData] = useState<null | Response>(null);
 
-  const submitAndReceive = useCallback(async () => {
+  const submitAndReceive = useCallback(async (inputValues: valuesType["inputValues"]) => {
     try {
       setLoading(true);
-      const fetchedData = await fetch(values.inputValues);
+      const fetchedData = await fetch(url, {
+        method:'POST',
+        headers:{
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(inputValues)
+      });
       setData(fetchedData);
     } catch (err) {
       setError(true);
@@ -24,12 +28,17 @@ const useSubmitandReceive = (values: valuesType) => {
     } finally {
       setLoading(false);
     }
-  }, [values]);
+  }, [url]);
 
-  useEffect(() => {
-    submitAndReceive();
-  }, [submitAndReceive]);
-  return [loading, data, error];
+  // useEffect(
+  //   ()=>{
+  //     if (values){
+  //       submitAndReceive(values)
+
+  //     }
+  //   }, [])
+
+  return {loading, data, error, submitAndReceive};
 };
 
 export default useSubmitandReceive;
