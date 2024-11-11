@@ -1,1 +1,68 @@
-node_modules
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+.venv/
+ENV/
+
+# Dependency files
+*.egg-info/
+.eggs/
+.Python
+
+# Byte-compiled files
+*.so
+*.pyd
+
+# Jupyter Notebooks checkpoints (if used for testing)
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
+
+# macOS files
+.DS_Store
+
+# System files
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+*.out
+*.err
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Config files and IDE settings
+*.sublime-workspace
+*.sublime-project
+
+# Database files (if any)
+*.db
+*.sqlite3
+
+# Migrations (if using Alembic or similar)
+migrations/
+
+# Docker
+*.docker
+docker-compose*.yml
+.dockerignore
+
+# Pytest cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+*.cover
+*.coverage.*
+.cache

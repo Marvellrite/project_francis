@@ -5,10 +5,55 @@ type valuesType = {
   inputValues: {[key:string]:string};
 };
 
+export type fetchedData_json = {
+  photosphere: {
+      lower: {
+          FMSW: number[],
+          SMSW: number[]
+      },
+      mid: {
+          FMSW: number[],
+          SMSW: number[]
+      },
+      upper: {
+          FMSW: number[],
+          SMSW: number[]
+      }
+  },
+  chromosphere: {
+      lower: {
+          FMSW: number[],
+          SMSW: number[]
+      },
+      mid: {
+          FMSW: number[],
+          SMSW: number[]
+      },
+      upper: {
+          FMSW: number[],
+          SMSW: number[]
+      }
+  },
+  corona: {
+      lower: {
+          FMSW: number[],
+          SMSW: number[]
+      },
+      mid: {
+          FMSW: number[],
+          SMSW: number[]
+      },
+      upper: {
+          FMSW: number[],
+          SMSW: number[]
+      }
+  }
+}
+
 const useSubmitandReceive = (url: string) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const [data, setData] = useState<null | Response>(null);
+  const [data, setData] = useState<null | fetchedData_json>(null);
 
   const submitAndReceive = useCallback(async (inputValues: valuesType["inputValues"]) => {
     try {
@@ -20,7 +65,10 @@ const useSubmitandReceive = (url: string) => {
         },
         body: JSON.stringify(inputValues)
       });
-      setData(fetchedData);
+      const fetchedData_json: fetchedData_json = await fetchedData.json()
+      console.log(fetchedData);
+      
+      setData(fetchedData_json);
     } catch (err) {
       setError(true);
       console.log(err);

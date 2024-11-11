@@ -10,13 +10,14 @@ import Loader from "./building_blocks/loader.tsx";
 import TAN_results from "./Calculation_Results_Tables/TAN_results.tsx";
 import Group_Velocity_results from "./Calculation_Results_Tables/Group_velocity_results.tsx";
 import Speed_ratio_results from "./Calculation_Results_Tables/Speed_ratio_results.tsx";
-import useSubmitFetch from '../custom-hooks/fetch.ts';
+import useSubmitFetch, { fetchedData_json } from '../custom-hooks/fetch.ts';
 import Speed_ratio from "./Calaculation_plaeholders/Speed_ratio.tsx";
 import Group_velocity from "./Calaculation_plaeholders/Group_velocity.tsx";
 import Tan from "./Calaculation_plaeholders/Tan.tsx";
 
 type contextType = {
-  setDisplayTable: react.Dispatch<React.SetStateAction<boolean>>;    
+  setDisplayTable: react.Dispatch<React.SetStateAction<boolean>>;
+  data: fetchedData_json  
 };
 export const Context = createContext<contextType|undefined>(undefined);
 
@@ -24,7 +25,7 @@ export const Context = createContext<contextType|undefined>(undefined);
 
 const Calculate = () => {
   const [calculationType, setCalculationType] = useState<string>("speed_ratio");
-  const {loading, data, submitAndReceive} = useSubmitFetch();
+  const {loading, data, submitAndReceive} = useSubmitFetch('/api/speed_ratio');
   const [displayTable, setDisplayTable]= useState(false);
 
 
@@ -60,7 +61,7 @@ try {
     }
   };
   return (
-    <Context.Provider  value={{setDisplayTable}}>
+    <Context.Provider  value={{setDisplayTable, data: data as fetchedData_json}}>
 
     <section className="form_section d-flex vh-100 align-items-center">
       <div className="container shadow-sm rounded bg-white position-relative">
@@ -145,9 +146,9 @@ const ViewResults:FC<viewResultsType> = ({calculationType}) => {
   const chooseCalculationType = ()=>{
     switch (calculationType) {
       case "speed_ratio":
-        return <Group_Velocity_results></Group_Velocity_results>
-      case "group_velocity":
         return <Speed_ratio_results></Speed_ratio_results> 
+        case "group_velocity":
+        return <Group_Velocity_results></Group_Velocity_results>
       case "TAN":
         return <TAN_results></TAN_results> 
     
