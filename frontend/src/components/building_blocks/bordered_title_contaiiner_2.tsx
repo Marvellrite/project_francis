@@ -7,6 +7,7 @@ type placeholder_3_type = {
   className?: string;
   title: ReactNode;
   border_color?: string;
+  title_position?: string
 };
 
 const Bordered_titled_container_2: FC<placeholder_3_type> = ({
@@ -14,12 +15,13 @@ const Bordered_titled_container_2: FC<placeholder_3_type> = ({
   className,
   title,
   border_color,
+  title_position='middle'
 }) => {
   return (
     <div className={className}>
       <div
         className={`bg-white rounded-2 border border-1 position-relative bordered_TC_2 border-${border_color}`}>
-        <div className="fw-semibold text-secondary translate-middle title text-center">
+        <div className={`fw-semibold text-secondary translate-middle title ${title_position} text-center`}>
           {title}
         </div>{" "}
         <div className={`bg-white px-3 pe-3 rounded-4`}>{children}</div>

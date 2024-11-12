@@ -1,9 +1,17 @@
 div.bordered_TC_2 {
   div.title {
     position: absolute;
-    left: 50%;
     top: 0%;
     padding: 0px 5px;
     background-color: white;
+    
+    &.middle{
+      left: 50%;
+
+    }
+    &.left{
+      left: 15%;
+
+    }
   }
 }
