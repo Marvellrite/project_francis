@@ -267,14 +267,16 @@ const Group_velocity = () => {
             }>
             <div className="mx-3 mt-4 mb-3">
               <Bordered_titled_container_2 title="Lower" border_color="prime">
-                <div className="row mx-0 w-100 pb-2 gy-2 mt-1">
+                <div className="row mx-0 w-100 pb-2 gy-2 mt-2">
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_1st_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Photosphere_lower_B0_1st_iteration">
                       1<sup>st</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_1st_iteration"
-                      name="B0_1st_iteration"
+                      id="Photosphere_lower_B0_1st_iteration"
+                      name="Photosphere_lower_B0_1st_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
@@ -282,24 +284,28 @@ const Group_velocity = () => {
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_2ndt_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Photosphere_lower_B0_2nd_iteration">
                       2<sup>nd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_2nd_iteration"
-                      name="B0_2nd_iteration"
+                      id="Photosphere_lower_B0_2nd_iteration"
+                      name="Photosphere_lower_B0_2nd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
                       value="200"></Label_input_2>
                   </div>
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_3rd_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Photosphere_lower_B0_3rd_iteration">
                       3<sup>rd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_3rd_iteration"
-                      name="B0_3rd_iteration"
+                      id="Photosphere_lower_B0_3rd_iteration"
+                      name="Photosphere_lower_B0_3rd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
@@ -307,12 +313,14 @@ const Group_velocity = () => {
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_4th_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Photosphere_lower_B0_4th_iteration">
                       4<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_4th_iteration"
-                      name="B0_4th_iteration"
+                      id="Photosphere_lower_B0_4th_iteration"
+                      name="Photosphere_lower_B0_4th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
@@ -320,12 +328,14 @@ const Group_velocity = () => {
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_5th_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Photosphere_lower_B0_5th_iteration">
                       5<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_5th_iteration"
-                      name="B0_5th_iteration"
+                      id="Photosphere_lower_B0_5th_iteration"
+                      name="Photosphere_lower_B0_5th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
@@ -336,138 +346,158 @@ const Group_velocity = () => {
             </div>
             <div className="mx-3 mt-4 mb-3">
               <Bordered_titled_container_2 title="Mid" border_color="prime">
-                <div className="row mx-0 w-100 pb-2 gy-2 mt-1">
+                <div className="row mx-0 w-100 pb-2 gy-2 mt-2">
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_1st_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Troposphere_mid_B0_1st_iteration">
                       1<sup>st</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_1st_iteration"
-                      name="B0_1st_iteration"
+                      id="Troposphere_mid_B0_1st_iteration"
+                      name="Troposphere_mid_B0_1st_iteration"
+                      required={true}
+                      type="number"
+                      unit={<i>G</i>}
+                      value="10"></Label_input_2>
+                  </div>
+
+                  <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Troposphere_mid_B0_2nd_iteration">
+                      2<sup>nd</sup>:
+                    </label>{" "}
+                    <Label_input_2
+                      id="Troposphere_mid_B0_2nd_iteration"
+                      name="Troposphere_mid_B0_2nd_iteration"
+                      required={true}
+                      type="number"
+                      unit={<i>G</i>}
+                      value="32.5"></Label_input_2>
+                  </div>
+                  <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Troposphere_mid_B0_3rd_iteration">
+                      3<sup>rd</sup>:
+                    </label>{" "}
+                    <Label_input_2
+                      id="Troposphere_mid_B0_3rd_iteration"
+                      name="Troposphere_mid_B0_3rd_iteration"
+                      required={true}
+                      type="number"
+                      unit={<i>G</i>}
+                      value="55"></Label_input_2>
+                  </div>
+
+                  <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Troposphere_mid_B0_4th_iteration">
+                      4<sup>th</sup>:
+                    </label>{" "}
+                    <Label_input_2
+                      id="Troposphere_mid_B0_4th_iteration"
+                      name="Troposphere_mid_B0_4th_iteration"
+                      required={true}
+                      type="number"
+                      unit={<i>G</i>}
+                      value="77.5"></Label_input_2>
+                  </div>
+
+                  <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Troposphere_mid_B0_5th_iteration">
+                      5<sup>th</sup>:
+                    </label>{" "}
+                    <Label_input_2
+                      id="Troposphere_mid_B0_5th_iteration"
+                      name="Troposphere_mid_B0_5th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
                       value="100"></Label_input_2>
-                  </div>
-
-                  <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_2ndt_iteration">
-                      2<sup>nd</sup>:
-                    </label>{" "}
-                    <Label_input_2
-                      id="B0_2nd_iteration"
-                      name="B0_2nd_iteration"
-                      required={true}
-                      type="number"
-                      unit={<i>G</i>}
-                      value="200"></Label_input_2>
-                  </div>
-                  <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_3rd_iteration">
-                      3<sup>rd</sup>:
-                    </label>{" "}
-                    <Label_input_2
-                      id="B0_3rd_iteration"
-                      name="B0_3rd_iteration"
-                      required={true}
-                      type="number"
-                      unit={<i>G</i>}
-                      value="300"></Label_input_2>
-                  </div>
-
-                  <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_4th_iteration">
-                      4<sup>th</sup>:
-                    </label>{" "}
-                    <Label_input_2
-                      id="B0_4th_iteration"
-                      name="B0_4th_iteration"
-                      required={true}
-                      type="number"
-                      unit={<i>G</i>}
-                      value="400"></Label_input_2>
-                  </div>
-
-                  <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_5th_iteration">
-                      5<sup>th</sup>:
-                    </label>{" "}
-                    <Label_input_2
-                      id="B0_5th_iteration"
-                      name="B0_5th_iteration"
-                      required={true}
-                      type="number"
-                      unit={<i>G</i>}
-                      value="500"></Label_input_2>
                   </div>
                 </div>
               </Bordered_titled_container_2>
             </div>
             <div className="mx-3 mt-4 mb-3">
               <Bordered_titled_container_2 title="Upper" border_color="prime">
-                <div className="row mx-0 w-100 pb-2 gy-2 mt-1">
+                <div className="row mx-0 w-100 pb-2 gy-2 mt-2">
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_1st_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Troposphere_upper_B0_1st_iteration">
                       1<sup>st</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_1st_iteration"
-                      name="B0_1st_iteration"
+                      id="Troposphere_upper_B0_1st_iteration"
+                      name="Troposphere_upper_B0_1st_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="100"></Label_input_2>
+                      value="1"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_2ndt_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Troposphere_upper_B0_2nd_iteration">
                       2<sup>nd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_2nd_iteration"
-                      name="B0_2nd_iteration"
+                      id="Troposphere_upper_B0_2nd_iteration"
+                      name="Troposphere_upper_B0_2nd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="200"></Label_input_2>
+                      value="3.25"></Label_input_2>
                   </div>
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_3rd_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Troposphere_upper_B0_3rd_iteration">
                       3<sup>rd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_3rd_iteration"
-                      name="B0_3rd_iteration"
+                      id="Troposphere_upper_B0_3rd_iteration"
+                      name="Troposphere_upper_B0_3rd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="300"></Label_input_2>
+                      value="5.5"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_4th_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Troposphere_upper_B0_4th_iteration">
                       4<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_4th_iteration"
-                      name="B0_4th_iteration"
+                      id="Troposphere_upper_B0_4th_iteration"
+                      name="Troposphere_upper_B0_4th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="400"></Label_input_2>
+                      value="7.75"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_5th_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Troposphere_upper_B0_5th_iteration">
                       5<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_5th_iteration"
-                      name="B0_5th_iteration"
+                      id="Troposphere_upper_B0_5th_iteration"
+                      name="Troposphere_upper_B0_5th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="500"></Label_input_2>
+                      value="10"></Label_input_2>
                   </div>
                 </div>
               </Bordered_titled_container_2>
@@ -486,207 +516,237 @@ const Group_velocity = () => {
             }>
             <div className="mx-3 mt-4 mb-3">
               <Bordered_titled_container_2 title="Lower" border_color="prime">
-                <div className="row mx-0 w-100 pb-2 gy-2 mt-1">
+                <div className="row mx-0 w-100 pb-2 gy-2 mt-2">
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_1st_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Chromosphere_lower_B0_1st_iteration">
                       1<sup>st</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_1st_iteration"
-                      name="B0_1st_iteration"
+                      id="Chromosphere_lower_B0_1st_iteration"
+                      name="Chromosphere_lower_B0_1st_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="100"></Label_input_2>
+                      value="1"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_2ndt_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Chromosphere_lower_B0_2nd_iteration">
                       2<sup>nd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_2nd_iteration"
-                      name="B0_2nd_iteration"
+                      id="Chromosphere_lower_B0_2nd_iteration"
+                      name="Chromosphere_lower_B0_2nd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="200"></Label_input_2>
+                      value="3.25"></Label_input_2>
                   </div>
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_3rd_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Chromosphere_lower_B0_3rd_iteration">
                       3<sup>rd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_3rd_iteration"
-                      name="B0_3rd_iteration"
+                      id="Chromosphere_lower_B0_3rd_iteration"
+                      name="Chromosphere_lower_B0_3rd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="300"></Label_input_2>
+                      value="5.5"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_4th_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Chromosphere_lower_B0_4th_iteration">
                       4<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_4th_iteration"
-                      name="B0_4th_iteration"
+                      id="Chromosphere_lower_B0_4th_iteration"
+                      name="Chromosphere_lower_B0_4th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="400"></Label_input_2>
+                      value="7.75"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_5th_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Chromosphere_lower_B0_5th_iteration">
                       5<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_5th_iteration"
-                      name="B0_5th_iteration"
+                      id="Chromosphere_lower_B0_5th_iteration"
+                      name="Chromosphere_lower_B0_5th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="500"></Label_input_2>
+                      value="10"></Label_input_2>
                   </div>
                 </div>
               </Bordered_titled_container_2>
             </div>
             <div className="mx-3 mt-4 mb-3">
               <Bordered_titled_container_2 title="Mid" border_color="prime">
-                <div className="row mx-0 w-100 pb-2 gy-2 mt-1">
+                <div className="row mx-0 w-100 pb-2 gy-2 mt-2">
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_1st_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Chromosphere_mid_B0_1st_iteration">
                       1<sup>st</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_1st_iteration"
-                      name="B0_1st_iteration"
+                      id="Chromosphere_mid_B0_1st_iteration"
+                      name="Chromosphere_mid_B0_1st_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="100"></Label_input_2>
+                      value="0.1"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_2ndt_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Chromosphere_mid_B0_2nd_iteration">
                       2<sup>nd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_2nd_iteration"
-                      name="B0_2nd_iteration"
+                      id="Chromosphere_mid_B0_2nd_iteration"
+                      name="Chromosphere_mid_B0_2nd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="200"></Label_input_2>
+                      value="0.325"></Label_input_2>
                   </div>
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_3rd_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Chromosphere_mid_B0_3rd_iteration">
                       3<sup>rd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_3rd_iteration"
-                      name="B0_3rd_iteration"
+                      id="Chromosphere_mid_B0_3rd_iteration"
+                      name="Chromosphere_mid_B0_3rd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="300"></Label_input_2>
+                      value="0.55"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_4th_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Chromosphere_mid_B0_4th_iteration">
                       4<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_4th_iteration"
-                      name="B0_4th_iteration"
+                      id="Chromosphere_mid_B0_4th_iteration"
+                      name="Chromosphere_mid_B0_4th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="400"></Label_input_2>
+                      value="0.775"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_5th_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Chromosphere_mid_B0_5th_iteration">
                       5<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_5th_iteration"
-                      name="B0_5th_iteration"
+                      id="Chromosphere_mid_B0_5th_iteration"
+                      name="Chromosphere_mid_B0_5th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="500"></Label_input_2>
+                      value="1.0"></Label_input_2>
                   </div>
                 </div>
               </Bordered_titled_container_2>
             </div>
             <div className="mx-3 mt-4 mb-3">
               <Bordered_titled_container_2 title="Upper" border_color="prime">
-                <div className="row mx-0 w-100 pb-2 gy-2 mt-1">
+                <div className="row mx-0 w-100 pb-2 gy-2 mt-2">
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_1st_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Chromosphere_upper_B0_1st_iteration">
                       1<sup>st</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_1st_iteration"
-                      name="B0_1st_iteration"
+                      id="Chromosphere_upper_B0_1st_iteration"
+                      name="Chromosphere_upper_B0_1st_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="100"></Label_input_2>
+                      value="0.01"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_2ndt_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Chromosphere_upper_B0_2nd_iteration">
                       2<sup>nd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_2nd_iteration"
-                      name="B0_2nd_iteration"
+                      id="Chromosphere_upper_B0_2nd_iteration"
+                      name="Chromosphere_upper_B0_2nd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="200"></Label_input_2>
+                      value="0.0325"></Label_input_2>
                   </div>
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_3rd_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Chromosphere_upper_B0_3rd_iteration">
                       3<sup>rd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_3rd_iteration"
-                      name="B0_3rd_iteration"
+                      id="Chromosphere_upper_B0_3rd_iteration"
+                      name="Chromosphere_upper_B0_3rd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="300"></Label_input_2>
+                      value="0.055"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_4th_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Chromosphere_upper_B0_4th_iteration">
                       4<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_4th_iteration"
-                      name="B0_4th_iteration"
+                      id="Chromosphere_upper_B0_4th_iteration"
+                      name="Chromosphere_upper_B0_4th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="400"></Label_input_2>
+                      value="0.0775"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_5th_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Chromosphere_upper_B0_5th_iteration">
                       5<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_5th_iteration"
-                      name="B0_5th_iteration"
+                      id="Chromosphere_upper_B0_5th_iteration"
+                      name="Chromosphere_upper_B0_5th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="500"></Label_input_2>
+                      value="0.1"></Label_input_2>
                   </div>
                 </div>
               </Bordered_titled_container_2>
@@ -705,207 +765,237 @@ const Group_velocity = () => {
             }>
             <div className="mx-3 mt-4 mb-3">
               <Bordered_titled_container_2 title="Lower" border_color="prime">
-                <div className="row mx-0 w-100 pb-2 gy-2 mt-1">
+                <div className="row mx-0 w-100 pb-2 gy-2 mt-2">
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_1st_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Corona_lower_B0_1st_iteration">
                       1<sup>st</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_1st_iteration"
-                      name="B0_1st_iteration"
+                      id="Corona_lower_B0_1st_iteration"
+                      name="Corona_lower_B0_1st_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="100"></Label_input_2>
+                      value="0.001"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_2ndt_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Corona_lower_B0_2nd_iteration">
                       2<sup>nd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_2nd_iteration"
-                      name="B0_2nd_iteration"
+                      id="Corona_lower_B0_2nd_iteration"
+                      name="Corona_lower_B0_2nd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="200"></Label_input_2>
+                      value="0.00325"></Label_input_2>
                   </div>
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_3rd_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Corona_lower_B0_3rd_iteration">
                       3<sup>rd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_3rd_iteration"
-                      name="B0_3rd_iteration"
+                      id="Corona_lower_B0_3rd_iteration"
+                      name="Corona_lower_B0_3rd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="300"></Label_input_2>
+                      value="0.0055"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_4th_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Corona_lower_B0_4th_iteration">
                       4<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_4th_iteration"
-                      name="B0_4th_iteration"
+                      id="Corona_lower_B0_4th_iteration"
+                      name="Corona_lower_B0_4th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="400"></Label_input_2>
+                      value="0.00775"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_5th_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Corona_lower_B0_5th_iteration">
                       5<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_5th_iteration"
-                      name="B0_5th_iteration"
+                      id="Corona_lower_B0_5th_iteration"
+                      name="Corona_lower_B0_5th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="500"></Label_input_2>
+                      value="0.01"></Label_input_2>
                   </div>
                 </div>
               </Bordered_titled_container_2>
             </div>
             <div className="mx-3 mt-4 mb-3">
               <Bordered_titled_container_2 title="Mid" border_color="prime">
-                <div className="row mx-0 w-100 pb-2 gy-2 mt-1">
+                <div className="row mx-0 w-100 pb-2 gy-2 mt-2">
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_1st_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Corona_mid_B0_1st_iteration">
                       1<sup>st</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_1st_iteration"
-                      name="B0_1st_iteration"
+                      id="Corona_mid_B0_1st_iteration"
+                      name="Corona_mid_B0_1st_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="100"></Label_input_2>
+                      value="0.0001"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_2ndt_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Corona_mid_B0_2nd_iteration">
                       2<sup>nd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_2nd_iteration"
-                      name="B0_2nd_iteration"
+                      id="Corona_mid_B0_2nd_iteration"
+                      name="Corona_mid_B0_2nd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="200"></Label_input_2>
+                      value="0.000325"></Label_input_2>
                   </div>
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_3rd_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Corona_mid_B0_3rd_iteration">
                       3<sup>rd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_3rd_iteration"
-                      name="B0_3rd_iteration"
+                      id="Corona_mid_B0_3rd_iteration"
+                      name="Corona_mid_B0_3rd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="300"></Label_input_2>
+                      value="0.00055"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_4th_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Corona_mid_B0_4th_iteration">
                       4<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_4th_iteration"
-                      name="B0_4th_iteration"
+                      id="Corona_mid_B0_4th_iteration"
+                      name="Corona_mid_B0_4th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="400"></Label_input_2>
+                      value="0.000775"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_5th_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Corona_mid_B0_5th_iteration">
                       5<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_5th_iteration"
-                      name="B0_5th_iteration"
+                      id="Corona_mid_B0_5th_iteration"
+                      name="Corona_mid_B0_5th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="500"></Label_input_2>
+                      value="0.001"></Label_input_2>
                   </div>
                 </div>
               </Bordered_titled_container_2>
             </div>
             <div className="mx-3 mt-4 mb-3">
               <Bordered_titled_container_2 title="Upper" border_color="prime">
-                <div className="row mx-0 w-100 pb-2 gy-2 mt-1">
+                <div className="row mx-0 w-100 pb-2 gy-2 mt-2">
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_1st_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Corona_upper_B0_1st_iteration">
                       1<sup>st</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_1st_iteration"
-                      name="B0_1st_iteration"
+                      id="Corona_upper_B0_1st_iteration"
+                      name="Corona_upper_B0_1st_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="100"></Label_input_2>
+                      value="0.00001"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_2ndt_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Corona_upper_B0_2nd_iteration">
                       2<sup>nd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_2nd_iteration"
-                      name="B0_2nd_iteration"
+                      id="Corona_upper_B0_2nd_iteration"
+                      name="Corona_upper_B0_2nd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="200"></Label_input_2>
+                      value="0.0000325"></Label_input_2>
                   </div>
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_3rd_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Corona_upper_B0_3rd_iteration">
                       3<sup>rd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_3rd_iteration"
-                      name="B0_3rd_iteration"
+                      id="Corona_upper_B0_3rd_iteration"
+                      name="Corona_upper_B0_3rd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="300"></Label_input_2>
+                      value="0.000055"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_4th_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Corona_upper_B0_4th_iteration">
                       4<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_4th_iteration"
-                      name="B0_4th_iteration"
+                      id="Corona_upper_B0_4th_iteration"
+                      name="Corona_upper_B0_4th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="400"></Label_input_2>
+                      value="0.0000775"></Label_input_2>
                   </div>
 
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
-                    <label className="fw-medium" htmlFor="B0_5th_iteration">
+                    <label
+                      className="fw-medium"
+                      htmlFor="Corona_upper_B0_5th_iteration">
                       5<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="B0_5th_iteration"
-                      name="B0_5th_iteration"
+                      id="Corona_upper_B0_5th_iteration"
+                      name="Corona_upper_B0_5th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
-                      value="500"></Label_input_2>
+                      value="0.0001"></Label_input_2>
                   </div>
                 </div>
               </Bordered_titled_container_2>
