@@ -1,6 +1,8 @@
 import Overlay_and_Modal from "./building_blocks/Overlay_and_Modal";
 import { FC, ReactNode } from "react";
 import Themed_btn from "./building_blocks/Themed_btn";
+import useContext_1 from "../custom-hooks/useContext";
+
 // import "";
 
 type Notify_Modal_type = {
@@ -26,6 +28,7 @@ const Notify_modal: FC<Notify_Modal_type> = ({
   btn_1_theme,
   btn_2_theme,
 }) => {
+  const { setError } = useContext_1()!;
   return (
     <Overlay_and_Modal close_btn={false} notify_modal={true}>
       <div className="row align-content-center text-center mt-3">
@@ -36,15 +39,20 @@ const Notify_modal: FC<Notify_Modal_type> = ({
         {!two_btns ? (
           <div className="text-center mt-4">
             <Themed_btn
+              type="button"
               btn_text={btn_text}
-              theme_class={btn_1_theme}></Themed_btn>
+              theme_class={btn_1_theme}
+              onClick={() => {
+                setError(false);
+              }}></Themed_btn>
           </div>
         ) : (
           <div
             className="text-center mt-4 d-flex justify-content-center"
             style={{ gap: "25px" }}>
-            <Themed_btn btn_text={btn_text_1}></Themed_btn>{" "}
+            <Themed_btn type="button" btn_text={btn_text_1}></Themed_btn>{" "}
             <Themed_btn
+              type="button"
               theme_class={btn_2_theme}
               btn_text={btn_text_2}></Themed_btn>
           </div>

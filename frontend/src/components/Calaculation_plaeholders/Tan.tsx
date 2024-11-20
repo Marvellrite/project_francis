@@ -18,573 +18,550 @@ const Tan = () => {
                 </div>
               }
               border_color="prime"
-              toggler={true}
-            >
+              toggler={true}>
               <div className="row mx-0 mt-3">
                 <Bordered_titled_container_2
-                  className="d-flex col-sm-4 col-12 pb-3 gap-3 flex-column flex-sm-row px-3"
+                  className="col-12 col-md-6 col-12 pb-3 gap-3 px-3"
                   title="Photosphere"
-                  border_color="prime"
-                >
+                  border_color="prime">
                   <div className="py-3 pt-4">
                     <div className="d-flex align-items-center gap-1 mb-2 flex-column gap-3">
-                      <Bordered_titled_container_2
-                        title="Lower"
-                        border_color="prime"
-                        title_position="left"
-                      >
-                        <div className="d-flex gap-2 align-items-center flex-column py-3">
-                          <div className="d-flex align-items-center gap-1">
-                            <label
-                              htmlFor="Va_lower_photosphere"
-                              className="text{<i>sec</i>}ndary fw-medium"
-                            >
-                              V
-                              <i>
-                                <sub>a</sub>
-                              </i>
-                              :
-                            </label>
-                            <Label_input_2
-                              id="Va_lower_photosphere"
-                              name="Va_lower_photosphere"
-                              type="number"
-                              align-items-center
-                              required={true}
-                              unit={
+                      <div className="w-100">
+                        <Bordered_titled_container_2
+                          title="Lower"
+                          border_color="prime"
+                          title_position="left">
+                          <div className="d-flex gap-2 align-items-center flex-column py-3">
+                            <div className="d-flex align-items-center gap-1 w-100">
+                              <label
+                                htmlFor="Va_lower_photosphere"
+                                className="text{<i>sec</i>}ndary fw-medium">
+                                V
                                 <i>
-                                  ms<sup>-1</sup>
+                                  <sub>a</sub>
                                 </i>
-                              }
-                              value="8.9*10**3"
-                            ></Label_input_2>
-                          </div>
+                                :
+                              </label>
+                              <Label_input_2
+                                id="Va_lower_photosphere"
+                                name="Va_lower_photosphere"
+                                type="number"
+                                align-items-center
+                                required={true}
+                                unit={
+                                  <i>
+                                    ms<sup>-1</sup>
+                                  </i>
+                                }
+                                value="8.9*10**3"></Label_input_2>
+                            </div>
 
-                          <div className="d-flex align-items-center gap-1">
-                            <label
-                              htmlFor="Vp_lower_photosphere"
-                              className="text{<i>sec</i>}ndary fw-medium"
-                            >
-                              V
-                              <i>
-                                <sub>p</sub>
-                              </i>
-                              :
-                            </label>
-                            <Label_input_2
-                              id="Vp_lower_photosphere"
-                              name="Vp_lower_photosphere"
-                              type="number"
-                              align-items-center
-                              required={true}
-                              unit={
+                            <div className="d-flex align-items-center gap-1 w-100">
+                              <label
+                                htmlFor="Vp_lower_photosphere"
+                                className="text{<i>sec</i>}ndary fw-medium">
+                                V
                                 <i>
-                                  ms<sup>-1</sup>
+                                  <sub>p</sub>
                                 </i>
-                              }
-                              value="1.7*10**3"
-                            ></Label_input_2>
+                                :
+                              </label>
+                              <Label_input_2
+                                id="Vp_lower_photosphere"
+                                name="Vp_lower_photosphere"
+                                type="number"
+                                align-items-center
+                                required={true}
+                                unit={
+                                  <i>
+                                    ms<sup>-1</sup>
+                                  </i>
+                                }
+                                value="1.7*10**3"></Label_input_2>
+                            </div>
                           </div>
-                        </div>
-                      </Bordered_titled_container_2>
-                      <Bordered_titled_container_2
-                        title="Mid"
-                        border_color="prime"
-                        title_position="left"
-                      >
-                        <div className="d-flex gap-2 align-items-center flex-column py-3">
-                          <div className="d-flex align-items-center gap-1">
-                            {" "}
-                            <label
-                              htmlFor="Va_photosphere_mid"
-                              className="text{<i>sec</i>}ndary fw-medium"
-                            >
-                              V
-                              <i>
-                                <sub>a</sub>
-                              </i>
-                              :
-                            </label>
-                            <Label_input_2
-                              id="Va_photosphere_mid"
-                              name="Va_photosphere_mid"
-                              type="number"
-                              align-items-center
-                              required={true}
-                              unit={
+                        </Bordered_titled_container_2>
+                      </div>
+                      <div className="w-100">
+                        {" "}
+                        <Bordered_titled_container_2
+                          title="Mid"
+                          border_color="prime"
+                          title_position="left">
+                          <div className="d-flex gap-2 align-items-center flex-column py-3">
+                            <div className="d-flex align-items-center gap-1 w-100">
+                              {" "}
+                              <label
+                                htmlFor="Va_photosphere_mid"
+                                className="text{<i>sec</i>}ndary fw-medium">
+                                V
                                 <i>
-                                  ms<sup>-1</sup>
+                                  <sub>a</sub>
                                 </i>
-                              }
-                              value="4.5*10**3"
-                            ></Label_input_2>
-                          </div>
-                          <div className="d-flex align-items-center gap-1">
-                            {" "}
-                            <label
-                              htmlFor="Vp_photosphere_mid"
-                              className="text{<i>sec</i>}ndary fw-medium"
-                            >
-                              V
-                              <i>
-                                <sub>a</sub>
-                              </i>
-                              :
-                            </label>
-                            <Label_input_2
-                              id="Vp_photosphere_mid"
-                              name="Vp_photosphere_mid"
-                              type="number"
-                              align-items-center
-                              required={true}
-                              unit={
+                                :
+                              </label>
+                              <Label_input_2
+                                id="Va_photosphere_mid"
+                                name="Va_photosphere_mid"
+                                type="number"
+                                align-items-center
+                                required={true}
+                                unit={
+                                  <i>
+                                    ms<sup>-1</sup>
+                                  </i>
+                                }
+                                value="4.5*10**3"></Label_input_2>
+                            </div>
+                            <div className="d-flex align-items-center gap-1 w-100">
+                              {" "}
+                              <label
+                                htmlFor="Vp_photosphere_mid"
+                                className="text{<i>sec</i>}ndary fw-medium">
+                                V
                                 <i>
-                                  ms<sup>-1</sup>
+                                  <sub>a</sub>
                                 </i>
-                              }
-                              value="1.5*10**3"
-                            ></Label_input_2>
+                                :
+                              </label>
+                              <Label_input_2
+                                id="Vp_photosphere_mid"
+                                name="Vp_photosphere_mid"
+                                type="number"
+                                align-items-center
+                                required={true}
+                                unit={
+                                  <i>
+                                    ms<sup>-1</sup>
+                                  </i>
+                                }
+                                value="1.5*10**3"></Label_input_2>
+                            </div>
                           </div>
-                        </div>
-                      </Bordered_titled_container_2>
-                      <Bordered_titled_container_2
-                        title="Upper"
-                        border_color="prime"
-                        title_position="left"
-                      >
-                        <div className="d-flex gap-2 align-items-center flex-column py-3">
-                          <div className="d-flex align-items-center gap-1">
-                            {" "}
-                            <label
-                              htmlFor="Va_photosphere_upper"
-                              className="text{<i>sec</i>}ndary fw-medium"
-                            >
-                              V
-                              <i>
-                                <sub>a</sub>
-                              </i>
-                              :
-                            </label>
-                            <Label_input_2
-                              id="Va_photosphere_upper"
-                              name="Va_photosphere_upper"
-                              type="number"
-                              align-items-center
-                              required={true}
-                              unit={
+                        </Bordered_titled_container_2>
+                      </div>
+
+                      <div className="w-100">
+                        <Bordered_titled_container_2
+                          title="Upper"
+                          border_color="prime"
+                          title_position="left">
+                          <div className="d-flex gap-2 align-items-center flex-column py-3">
+                            <div className="d-flex align-items-center gap-1 w-100">
+                              {" "}
+                              <label
+                                htmlFor="Va_photosphere_upper"
+                                className="text{<i>sec</i>}ndary fw-medium">
+                                V
                                 <i>
-                                  ms<sup>-1</sup>
+                                  <sub>a</sub>
                                 </i>
-                              }
-                              value="2.8*10**3"
-                            ></Label_input_2>
-                          </div>
-                          <div className="d-flex align-items-center gap-1">
-                            {" "}
-                            <label
-                              htmlFor="Vp_photosphere_upper"
-                              className="text{<i>sec</i>}ndary fw-medium"
-                            >
-                              V
-                              <i>
-                                <sub>p</sub>
-                              </i>
-                              :
-                            </label>
-                            <Label_input_2
-                              id="Vp_photosphere_upper"
-                              name="Vp_photosphere_upper"
-                              type="number"
-                              align-items-center
-                              required={true}
-                              unit={
+                                :
+                              </label>
+                              <Label_input_2
+                                id="Va_photosphere_upper"
+                                name="Va_photosphere_upper"
+                                type="number"
+                                align-items-center
+                                required={true}
+                                unit={
+                                  <i>
+                                    ms<sup>-1</sup>
+                                  </i>
+                                }
+                                value="2.8*10**3"></Label_input_2>
+                            </div>
+                            <div className="d-flex align-items-center gap-1 w-100">
+                              {" "}
+                              <label
+                                htmlFor="Vp_photosphere_upper"
+                                className="text{<i>sec</i>}ndary fw-medium">
+                                V
                                 <i>
-                                  ms<sup>-1</sup>
+                                  <sub>p</sub>
                                 </i>
-                              }
-                              value="1.5*10**3"
-                            ></Label_input_2>
+                                :
+                              </label>
+                              <Label_input_2
+                                id="Vp_photosphere_upper"
+                                name="Vp_photosphere_upper"
+                                type="number"
+                                align-items-center
+                                required={true}
+                                unit={
+                                  <i>
+                                    ms<sup>-1</sup>
+                                  </i>
+                                }
+                                value="1.5*10**3"></Label_input_2>
+                            </div>
                           </div>
-                        </div>
-                      </Bordered_titled_container_2>
+                        </Bordered_titled_container_2>
+                      </div>
                     </div>
                   </div>
                 </Bordered_titled_container_2>
                 <Bordered_titled_container_2
-                  className="d-flex col-sm-4 col-12 pb-3 gap-3 flex-column flex-sm-row px-3"
+                  className=" col-12 col-md-6 col-12 pb-3 gap-3 px-3"
                   title="Chromosphere"
-                  border_color="prime"
-                >
+                  border_color="prime">
                   <div className="py-3 pt-4">
                     <div className="d-flex align-items-center gap-1 mb-2 flex-column gap-3">
-                      <Bordered_titled_container_2
-                        title="Lower"
-                        border_color="prime"
-                        title_position="left"
-                      >
-                        <div className="d-flex gap-2 align-items-center flex-column py-3">
-                          <div className="d-flex align-items-center gap-1">
-                            <label
-                              htmlFor="Va_lower_chromosphere"
-                              className="text{<i>sec</i>}ndary fw-medium"
-                            >
-                              V
-                              <i>
-                                <sub>a</sub>
-                              </i>
-                              :
-                            </label>
-                            <Label_input_2
-                              id="Va_lower_chromosphere"
-                              name="Va_lower_chromosphere"
-                              type="number"
-                              align-items-center
-                              required={true}
-                              unit={
+                      <div className="w-100">
+                        {" "}
+                        <Bordered_titled_container_2
+                          title="Lower"
+                          border_color="prime"
+                          title_position="left">
+                          <div className="d-flex gap-2 align-items-center flex-column py-3">
+                            <div className="d-flex align-items-center gap-1 w-100">
+                              <label
+                                htmlFor="Va_lower_chromosphere"
+                                className="text{<i>sec</i>}ndary fw-medium">
+                                V
                                 <i>
-                                  ms<sup>-1</sup>
+                                  <sub>a</sub>
                                 </i>
-                              }
-                              value="8.92*10**3"
-                            ></Label_input_2>
-                          </div>
+                                :
+                              </label>
+                              <Label_input_2
+                                id="Va_lower_chromosphere"
+                                name="Va_lower_chromosphere"
+                                type="number"
+                                align-items-center
+                                required={true}
+                                unit={
+                                  <i>
+                                    ms<sup>-1</sup>
+                                  </i>
+                                }
+                                value="8.92*10**3"></Label_input_2>
+                            </div>
 
-                          <div className="d-flex align-items-center gap-1">
-                            <label
-                              htmlFor="Vp_lower_chromosphere"
-                              className="text{<i>sec</i>}ndary fw-medium"
-                            >
-                              V
-                              <i>
-                                <sub>p</sub>
-                              </i>
-                              :
-                            </label>
-                            <Label_input_2
-                              id="Vp_lower_chromosphere"
-                              name="Vp_lower_chromosphere"
-                              type="number"
-                              align-items-center
-                              required={true}
-                              unit={
+                            <div className="d-flex align-items-center gap-1 w-100">
+                              <label
+                                htmlFor="Vp_lower_chromosphere"
+                                className="text{<i>sec</i>}ndary fw-medium">
+                                V
                                 <i>
-                                  ms<sup>-1</sup>
+                                  <sub>p</sub>
                                 </i>
-                              }
-                              value="1.7*10**3"
-                            ></Label_input_2>
+                                :
+                              </label>
+                              <Label_input_2
+                                id="Vp_lower_chromosphere"
+                                name="Vp_lower_chromosphere"
+                                type="number"
+                                align-items-center
+                                required={true}
+                                unit={
+                                  <i>
+                                    ms<sup>-1</sup>
+                                  </i>
+                                }
+                                value="1.7*10**3"></Label_input_2>
+                            </div>
                           </div>
-                        </div>
-                      </Bordered_titled_container_2>
-                      <Bordered_titled_container_2
-                        title="Mid"
-                        border_color="prime"
-                        title_position="left"
-                      >
-                        <div className="d-flex gap-2 align-items-center flex-column py-3">
-                          <div className="d-flex align-items-center gap-1">
-                            {" "}
-                            <label
-                              htmlFor="Va_mid_chromosphere"
-                              className="text{<i>sec</i>}ndary fw-medium"
-                            >
-                              V
-                              <i>
-                                <sub>a</sub>
-                              </i>
-                              :
-                            </label>
-                            <Label_input_2
-                              id="Va_mid_chromosphere"
-                              name="Va_mid_chromosphere"
-                              type="number"
-                              align-items-center
-                              required={true}
-                              unit={
+                        </Bordered_titled_container_2>
+                      </div>
+
+                      <div className="w-100">
+                        <Bordered_titled_container_2
+                          title="Mid"
+                          border_color="prime"
+                          title_position="left">
+                          <div className="d-flex gap-2 align-items-center flex-column py-3">
+                            <div className="d-flex align-items-center gap-1 w-100">
+                              {" "}
+                              <label
+                                htmlFor="Va_mid_chromosphere"
+                                className="text{<i>sec</i>}ndary fw-medium">
+                                V
                                 <i>
-                                  ms<sup>-1</sup>
+                                  <sub>a</sub>
                                 </i>
-                              }
-                              value="1.41*10**3"
-                            ></Label_input_2>
-                          </div>
-                          <div className="d-flex align-items-center gap-1">
-                            {" "}
-                            <label
-                              htmlFor="Vp_mid_chromosphere"
-                              className="text{<i>sec</i>}ndary fw-medium"
-                            >
-                              V
-                              <i>
-                                <sub>p</sub>
-                              </i>
-                              :
-                            </label>
-                            <Label_input_2
-                              id="Vp_mid_chromosphere"
-                              name="Vp_mid_chromosphere"
-                              type="number"
-                              align-items-center
-                              required={true}
-                              unit={
+                                :
+                              </label>
+                              <Label_input_2
+                                id="Va_mid_chromosphere"
+                                name="Va_mid_chromosphere"
+                                type="number"
+                                align-items-center
+                                required={true}
+                                unit={
+                                  <i>
+                                    ms<sup>-1</sup>
+                                  </i>
+                                }
+                                value="1.41*10**3"></Label_input_2>
+                            </div>
+                            <div className="d-flex align-items-center gap-1 w-100">
+                              {" "}
+                              <label
+                                htmlFor="Vp_mid_chromosphere"
+                                className="text{<i>sec</i>}ndary fw-medium">
+                                V
                                 <i>
-                                  ms<sup>-1</sup>
+                                  <sub>p</sub>
                                 </i>
-                              }
-                              value="1.83*10**3"
-                            ></Label_input_2>
+                                :
+                              </label>
+                              <Label_input_2
+                                id="Vp_mid_chromosphere"
+                                name="Vp_mid_chromosphere"
+                                type="number"
+                                align-items-center
+                                required={true}
+                                unit={
+                                  <i>
+                                    ms<sup>-1</sup>
+                                  </i>
+                                }
+                                value="1.83*10**3"></Label_input_2>
+                            </div>
                           </div>
-                        </div>
-                      </Bordered_titled_container_2>
-                      <Bordered_titled_container_2
-                        title="Upper"
-                        border_color="prime"
-                        title_position="left"
-                      >
-                        <div className="d-flex gap-2 align-items-center flex-column py-3">
-                          <div className="d-flex align-items-center gap-1">
-                            {" "}
-                            <label
-                              htmlFor="Va_chromosphere_upper"
-                              className="text{<i>sec</i>}ndary fw-medium"
-                            >
-                              V
-                              <i>
-                                <sub>a</sub>
-                              </i>
-                              :
-                            </label>
-                            <Label_input_2
-                              id="Va_chromosphere_upper"
-                              name="Va_chromosphere_upper"
-                              type="number"
-                              align-items-center
-                              required={true}
-                              unit={
+                        </Bordered_titled_container_2>
+                      </div>
+
+                      <div className="w-100">
+                        <Bordered_titled_container_2
+                          title="Upper"
+                          border_color="prime"
+                          title_position="left">
+                          <div className="d-flex gap-2 align-items-center flex-column py-3">
+                            <div className="d-flex align-items-center gap-1 w-100">
+                              {" "}
+                              <label
+                                htmlFor="Va_chromosphere_upper"
+                                className="text{<i>sec</i>}ndary fw-medium">
+                                V
                                 <i>
-                                  ms<sup>-1</sup>
+                                  <sub>a</sub>
                                 </i>
-                              }
-                              value="2.68*10**3"
-                            ></Label_input_2>
-                          </div>
-                          <div className="d-flex align-items-center gap-1">
-                            {" "}
-                            <label
-                              htmlFor="Vp_chromosphere_upper"
-                              className="text{<i>sec</i>}ndary fw-medium"
-                            >
-                              V
-                              <i>
-                                <sub>p</sub>
-                              </i>
-                              :
-                            </label>
-                            <Label_input_2
-                              id="Vp_chromosphere_upper"
-                              name="Vp_chromosphere_upper"
-                              type="number"
-                              align-items-center
-                              required={true}
-                              unit={
+                                :
+                              </label>
+                              <Label_input_2
+                                id="Va_chromosphere_upper"
+                                name="Va_chromosphere_upper"
+                                type="number"
+                                align-items-center
+                                required={true}
+                                unit={
+                                  <i>
+                                    ms<sup>-1</sup>
+                                  </i>
+                                }
+                                value="2.68*10**3"></Label_input_2>
+                            </div>
+                            <div className="d-flex align-items-center gap-1 w-100">
+                              {" "}
+                              <label
+                                htmlFor="Vp_chromosphere_upper"
+                                className="text{<i>sec</i>}ndary fw-medium">
+                                V
                                 <i>
-                                  ms<sup>-1</sup>
+                                  <sub>p</sub>
                                 </i>
-                              }
-                              value="1.96*10**3"
-                            ></Label_input_2>
+                                :
+                              </label>
+                              <Label_input_2
+                                id="Vp_chromosphere_upper"
+                                name="Vp_chromosphere_upper"
+                                type="number"
+                                align-items-center
+                                required={true}
+                                unit={
+                                  <i>
+                                    ms<sup>-1</sup>
+                                  </i>
+                                }
+                                value="1.96*10**3"></Label_input_2>
+                            </div>
                           </div>
-                        </div>
-                      </Bordered_titled_container_2>
+                        </Bordered_titled_container_2>
+                      </div>
                     </div>
                   </div>
                 </Bordered_titled_container_2>
                 <Bordered_titled_container_2
-                  className="d-flex col-sm-4 col-12 pb-3 gap-3 flex-column flex-sm-row px-3"
+                  className="col-12 col-md-6 col-12 pb-3 gap-3 px-3"
                   title="Corona"
-                  border_color="prime"
-                >
+                  border_color="prime">
                   <div className="py-3 pt-4">
                     <div className="d-flex align-items-center gap-1 mb-2 flex-column gap-3">
-                      <Bordered_titled_container_2
-                        title="Lower"
-                        border_color="prime"
-                        title_position="left"
-                      >
-                        <div className="d-flex gap-2 align-items-center flex-column py-3">
-                          <div className="d-flex align-items-center gap-1">
-                            <label
-                              htmlFor="Va_lower_corona"
-                              className="text{<i>sec</i>}ndary fw-medium"
-                            >
-                              V
-                              <i>
-                                <sub>a</sub>
-                              </i>
-                              :
-                            </label>
-                            <Label_input_2
-                              id="Va_lower_corona"
-                              name="Va_lower_corona"
-                              type="number"
-                              align-items-center
-                              required={true}
-                              unit={
+                      <div className="w-100">
+                        <Bordered_titled_container_2
+                          title="Lower"
+                          border_color="prime"
+                          title_position="left">
+                          <div className="d-flex gap-2 align-items-center flex-column py-3">
+                            <div className="d-flex align-items-center gap-1 w-100">
+                              <label
+                                htmlFor="Va_lower_corona"
+                                className="text{<i>sec</i>}ndary fw-medium">
+                                V
                                 <i>
-                                  ms<sup>-1</sup>
+                                  <sub>a</sub>
                                 </i>
-                              }
-                              value="8.92*10**4"
-                            ></Label_input_2>
-                          </div>
+                                :
+                              </label>
+                              <Label_input_2
+                                id="Va_lower_corona"
+                                name="Va_lower_corona"
+                                type="number"
+                                align-items-center
+                                required={true}
+                                unit={
+                                  <i>
+                                    ms<sup>-1</sup>
+                                  </i>
+                                }
+                                value="8.92*10**4"></Label_input_2>
+                            </div>
 
-                          <div className="d-flex align-items-center gap-1">
-                            <label
-                              htmlFor="Vp_lower_corona"
-                              className="text{<i>sec</i>}ndary fw-medium"
-                            >
-                              V
-                              <i>
-                                <sub>p</sub>
-                              </i>
-                              :
-                            </label>
-                            <Label_input_2
-                              id="Vp_lower_corona"
-                              name="Vp_lower_corona"
-                              type="number"
-                              align-items-center
-                              required={true}
-                              unit={
+                            <div className="d-flex align-items-center gap-1 w-100">
+                              <label
+                                htmlFor="Vp_lower_corona"
+                                className="text{<i>sec</i>}ndary fw-medium">
+                                V
                                 <i>
-                                  ms<sup>-1</sup>
+                                  <sub>p</sub>
                                 </i>
-                              }
-                              value="2.19*10**4"
-                            ></Label_input_2>
+                                :
+                              </label>
+                              <Label_input_2
+                                id="Vp_lower_corona"
+                                name="Vp_lower_corona"
+                                type="number"
+                                align-items-center
+                                required={true}
+                                unit={
+                                  <i>
+                                    ms<sup>-1</sup>
+                                  </i>
+                                }
+                                value="2.19*10**4"></Label_input_2>
+                            </div>
                           </div>
-                        </div>
-                      </Bordered_titled_container_2>
-                      <Bordered_titled_container_2
-                        title="Mid"
-                        border_color="prime"
-                        title_position="left"
-                      >
-                        <div className="d-flex gap-2 align-items-center flex-column py-3">
-                          <div className="d-flex align-items-center gap-1">
-                            {" "}
-                            <label
-                              htmlFor="Va_mid_corona"
-                              className="text{<i>sec</i>}ndary fw-medium"
-                            >
-                              V
-                              <i>
-                                <sub>a</sub>
-                              </i>
-                              :
-                            </label>
-                            <Label_input_2
-                              id="Va_mid_corona"
-                              name="Va_mid_corona"
-                              type="number"
-                              align-items-center
-                              required={true}
-                              unit={
+                        </Bordered_titled_container_2>
+                      </div>
+
+                      <div className="w-100">
+                        {" "}
+                        <Bordered_titled_container_2
+                          title="Mid"
+                          border_color="prime"
+                          title_position="left">
+                          <div className="d-flex gap-2 align-items-center flex-column py-3">
+                            <div className="d-flex align-items-center gap-1 w-100">
+                              {" "}
+                              <label
+                                htmlFor="Va_mid_corona"
+                                className="text{<i>sec</i>}ndary fw-medium">
+                                V
                                 <i>
-                                  ms<sup>-1</sup>
+                                  <sub>a</sub>
                                 </i>
-                              }
-                              value="4.5*10**6"
-                            ></Label_input_2>
-                          </div>
-                          <div className="d-flex align-items-center gap-1">
-                            {" "}
-                            <label
-                              htmlFor="Vp_mid_corona"
-                              className="text{<i>sec</i>}ndary fw-medium"
-                            >
-                              V
-                              <i>
-                                <sub>p</sub>
-                              </i>
-                              :
-                            </label>
-                            <Label_input_2
-                              id="Vp_mid_corona"
-                              name="Vp_mid_corona"
-                              type="number"
-                              align-items-center
-                              required={true}
-                              unit={
+                                :
+                              </label>
+                              <Label_input_2
+                                id="Va_mid_corona"
+                                name="Va_mid_corona"
+                                type="number"
+                                align-items-center
+                                required={true}
+                                unit={
+                                  <i>
+                                    ms<sup>-1</sup>
+                                  </i>
+                                }
+                                value="4.5*10**6"></Label_input_2>
+                            </div>
+                            <div className="d-flex align-items-center gap-1 w-100">
+                              {" "}
+                              <label
+                                htmlFor="Vp_mid_corona"
+                                className="text{<i>sec</i>}ndary fw-medium">
+                                V
                                 <i>
-                                  ms<sup>-1</sup>
+                                  <sub>p</sub>
                                 </i>
-                              }
-                              value="8*10**5"
-                            ></Label_input_2>
+                                :
+                              </label>
+                              <Label_input_2
+                                id="Vp_mid_corona"
+                                name="Vp_mid_corona"
+                                type="number"
+                                align-items-center
+                                required={true}
+                                unit={
+                                  <i>
+                                    ms<sup>-1</sup>
+                                  </i>
+                                }
+                                value="8*10**5"></Label_input_2>
+                            </div>
                           </div>
-                        </div>
-                      </Bordered_titled_container_2>
-                      <Bordered_titled_container_2
-                        title="Upper"
-                        border_color="prime"
-                        title_position="left"
-                      >
-                        <div className="d-flex gap-2 align-items-center flex-column py-3">
-                          <div className="d-flex align-items-center gap-1">
-                            {" "}
-                            <label
-                              htmlFor="Va_upper_corona"
-                              className="text{<i>sec</i>}ndary fw-medium"
-                            >
-                              V
-                              <i>
-                                <sub>a</sub>
-                              </i>
-                              :
-                            </label>
-                            <Label_input_2
-                              id="Va_upper_corona"
-                              name="Va_upper_corona"
-                              type="number"
-                              align-items-center
-                              required={true}
-                              unit={
+                        </Bordered_titled_container_2>
+                      </div>
+
+                      <div className="w-100">
+                        <Bordered_titled_container_2
+                          title="Upper"
+                          border_color="prime"
+                          title_position="left">
+                          <div className="d-flex gap-2 align-items-center flex-column py-3">
+                            <div className="d-flex align-items-center gap-1 w-100">
+                              {" "}
+                              <label
+                                htmlFor="Va_upper_corona"
+                                className="text{<i>sec</i>}ndary fw-medium">
+                                V
                                 <i>
-                                  ms<sup>-1</sup>
+                                  <sub>a</sub>
                                 </i>
-                              }
-                              value="7.3*10**6"
-                            ></Label_input_2>
-                          </div>
-                          <div className="d-flex align-items-center gap-1">
-                            {" "}
-                            <label
-                              htmlFor="Vp_upper_corona"
-                              className="text{<i>sec</i>}ndary fw-medium"
-                            >
-                              V
-                              <i>
-                                <sub>p</sub>
-                              </i>
-                              :
-                            </label>
-                            <Label_input_2
-                              id="Vp_upper_corona"
-                              name="Vp_upper_corona"
-                              type="number"
-                              align-items-center
-                              required={true}
-                              unit={
+                                :
+                              </label>
+                              <Label_input_2
+                                id="Va_upper_corona"
+                                name="Va_upper_corona"
+                                type="number"
+                                align-items-center
+                                required={true}
+                                unit={
+                                  <i>
+                                    ms<sup>-1</sup>
+                                  </i>
+                                }
+                                value="7.3*10**6"></Label_input_2>
+                            </div>
+                            <div className="d-flex align-items-center gap-1 w-100">
+                              {" "}
+                              <label
+                                htmlFor="Vp_upper_corona"
+                                className="text{<i>sec</i>}ndary fw-medium">
+                                V
                                 <i>
-                                  ms<sup>-1</sup>
+                                  <sub>p</sub>
                                 </i>
-                              }
-                              value="1.5*10**6"
-                            ></Label_input_2>
+                                :
+                              </label>
+                              <Label_input_2
+                                id="Vp_upper_corona"
+                                name="Vp_upper_corona"
+                                type="number"
+                                align-items-center
+                                required={true}
+                                unit={
+                                  <i>
+                                    ms<sup>-1</sup>
+                                  </i>
+                                }
+                                value="1.5*10**6"></Label_input_2>
+                            </div>
                           </div>
-                        </div>
-                      </Bordered_titled_container_2>
+                        </Bordered_titled_container_2>
+                      </div>
                     </div>
                   </div>
                 </Bordered_titled_container_2>
@@ -597,24 +574,20 @@ const Tan = () => {
             <Placeholder_3
               toggler={true}
               border_color="prime"
-              title="Iteration Specfic Values"
-            >
+              title="Iteration Specfic Values">
               <div className="row mx-0 w-100 pb-2 pt-3">
                 <div className="col-12 col-sm-6 col-md-4 g-3">
                   {" "}
                   <Bordered_titled_container_2
                     title="1st Iteration"
-                    border_color="prime"
-                  >
+                    border_color="prime">
                     <div
                       className="d-flex pb-3 flex-column gap-2"
-                      style={{ paddingTop: "1.7rem" }}
-                    >
+                      style={{ paddingTop: "1.7rem" }}>
                       <div className="d-flex align-items-center gap-2">
                         <label
                           className="fw-medium col-2"
-                          htmlFor="T_1st_iteration"
-                        >
+                          htmlFor="T_1st_iteration">
                           T:
                         </label>{" "}
                         <Label_input_2
@@ -623,14 +596,12 @@ const Tan = () => {
                           required={true}
                           type="number"
                           unit={<i>sec</i>}
-                          value="5"
-                        ></Label_input_2>
+                          value="5"></Label_input_2>
                       </div>
                       <div className="d-flex align-items-center gap-2 ">
                         <label
                           className="fw-medium col-2"
-                          htmlFor="lambda_1st_iteration"
-                        >
+                          htmlFor="lambda_1st_iteration">
                           <i>&lambda;:</i>
                         </label>{" "}
                         <Label_input_2
@@ -639,8 +610,7 @@ const Tan = () => {
                           required={true}
                           type="number"
                           unit={<i>m</i>}
-                          value="2.5*10**4"
-                        ></Label_input_2>{" "}
+                          value="2.5*10**4"></Label_input_2>{" "}
                       </div>
                     </div>
                   </Bordered_titled_container_2>
@@ -649,17 +619,14 @@ const Tan = () => {
                   {" "}
                   <Bordered_titled_container_2
                     title="2nd Iteration"
-                    border_color="prime"
-                  >
+                    border_color="prime">
                     <div
                       className="d-flex pb-3 flex-column gap-2"
-                      style={{ paddingTop: "1.7rem" }}
-                    >
+                      style={{ paddingTop: "1.7rem" }}>
                       <div className="d-flex align-items-center gap-2">
                         <label
                           className="fw-medium col-2"
-                          htmlFor="T_2nd_iteration"
-                        >
+                          htmlFor="T_2nd_iteration">
                           T:
                         </label>{" "}
                         <Label_input_2
@@ -668,14 +635,12 @@ const Tan = () => {
                           required={true}
                           type="number"
                           unit={<i>sec</i>}
-                          value="6.75"
-                        ></Label_input_2>
+                          value="6.75"></Label_input_2>
                       </div>
                       <div className="d-flex align-items-center gap-2 ">
                         <label
                           className="fw-medium col-2"
-                          htmlFor="lambda_2nd_iteration"
-                        >
+                          htmlFor="lambda_2nd_iteration">
                           <i>&lambda;:</i>
                         </label>{" "}
                         <Label_input_2
@@ -684,8 +649,7 @@ const Tan = () => {
                           required={true}
                           type="number"
                           unit={<i>m</i>}
-                          value="1.44*10**5"
-                        ></Label_input_2>
+                          value="1.44*10**5"></Label_input_2>
                       </div>
                     </div>
                   </Bordered_titled_container_2>
@@ -694,17 +658,14 @@ const Tan = () => {
                   {" "}
                   <Bordered_titled_container_2
                     title="3rd Iteration"
-                    border_color="prime"
-                  >
+                    border_color="prime">
                     <div
                       className="d-flex pb-3 flex-column gap-2"
-                      style={{ paddingTop: "1.7rem" }}
-                    >
+                      style={{ paddingTop: "1.7rem" }}>
                       <div className="d-flex align-items-center gap-2">
                         <label
                           className="fw-medium col-2"
-                          htmlFor="T_3rd_iteration"
-                        >
+                          htmlFor="T_3rd_iteration">
                           T:
                         </label>{" "}
                         <Label_input_2
@@ -713,14 +674,12 @@ const Tan = () => {
                           required={true}
                           type="number"
                           unit={<i>sec</i>}
-                          value="8.5"
-                        ></Label_input_2>
+                          value="8.5"></Label_input_2>
                       </div>
                       <div className="d-flex align-items-center gap-2 ">
                         <label
                           className="fw-medium col-2"
-                          htmlFor="lambda_3rd_iteration"
-                        >
+                          htmlFor="lambda_3rd_iteration">
                           <i>&lambda;:</i>
                         </label>{" "}
                         <Label_input_2
@@ -729,8 +688,7 @@ const Tan = () => {
                           required={true}
                           type="number"
                           unit={<i>m</i>}
-                          value="2.63*10**5"
-                        ></Label_input_2>
+                          value="2.63*10**5"></Label_input_2>
                       </div>
                     </div>
                   </Bordered_titled_container_2>
@@ -739,17 +697,14 @@ const Tan = () => {
                   {" "}
                   <Bordered_titled_container_2
                     title="4th Iteration"
-                    border_color="prime"
-                  >
+                    border_color="prime">
                     <div
                       className="d-flex pb-3 flex-column gap-2"
-                      style={{ paddingTop: "1.7rem" }}
-                    >
+                      style={{ paddingTop: "1.7rem" }}>
                       <div className="d-flex align-items-center gap-2">
                         <label
                           className="fw-medium col-2"
-                          htmlFor="T_4th_iteration"
-                        >
+                          htmlFor="T_4th_iteration">
                           T:
                         </label>{" "}
                         <Label_input_2
@@ -758,14 +713,12 @@ const Tan = () => {
                           required={true}
                           type="number"
                           unit={<i>sec</i>}
-                          value="10.25"
-                        ></Label_input_2>
+                          value="10.25"></Label_input_2>
                       </div>
                       <div className="d-flex align-items-center gap-2 ">
                         <label
                           className="fw-medium col-2"
-                          htmlFor="lambda_4th_iteration"
-                        >
+                          htmlFor="lambda_4th_iteration">
                           <i>&lambda;:</i>
                         </label>{" "}
                         <Label_input_2
@@ -774,8 +727,7 @@ const Tan = () => {
                           required={true}
                           type="number"
                           unit={<i>m</i>}
-                          value="3.81*10**5"
-                        ></Label_input_2>
+                          value="3.81*10**5"></Label_input_2>
                       </div>
                     </div>
                   </Bordered_titled_container_2>
@@ -784,17 +736,14 @@ const Tan = () => {
                   {" "}
                   <Bordered_titled_container_2
                     title="5th Iteration"
-                    border_color="prime"
-                  >
+                    border_color="prime">
                     <div
                       className="d-flex pb-3 flex-column gap-2"
-                      style={{ paddingTop: "1.7rem" }}
-                    >
+                      style={{ paddingTop: "1.7rem" }}>
                       <div className="d-flex align-items-center gap-2">
                         <label
                           className="fw-medium col-2"
-                          htmlFor="T_5th_iteration"
-                        >
+                          htmlFor="T_5th_iteration">
                           T:
                         </label>{" "}
                         <Label_input_2
@@ -803,14 +752,12 @@ const Tan = () => {
                           required={true}
                           type="number"
                           unit={<i>sec</i>}
-                          value="12"
-                        ></Label_input_2>
+                          value="12"></Label_input_2>
                       </div>
                       <div className="d-flex align-items-center gap-2 ">
                         <label
                           className="fw-medium col-2"
-                          htmlFor="lambda_5th_iteration"
-                        >
+                          htmlFor="lambda_5th_iteration">
                           <i>&lambda;:</i>
                         </label>{" "}
                         <Label_input_2
@@ -819,8 +766,7 @@ const Tan = () => {
                           required={true}
                           type="number"
                           unit={<i>m</i>}
-                          value="5*10**5"
-                        ></Label_input_2>
+                          value="5*10**5"></Label_input_2>
                       </div>
                     </div>
                   </Bordered_titled_container_2>

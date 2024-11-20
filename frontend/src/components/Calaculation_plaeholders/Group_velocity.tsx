@@ -24,7 +24,7 @@ const Group_velocity = () => {
           </div>
         </div>
 
-        <div className="d-flex gap-2 align-items-center col-12 col-sm-4">
+        <div className="d-flex gap-2 align-items-center col-12 col-sm-4 mb-2">
           <label htmlFor="beta1">
             <i>&beta;</i>:
           </label>
@@ -48,7 +48,7 @@ const Group_velocity = () => {
             </div>
           </div>
         </div>
-        <div className="d-flex gap-2 align-items-center col-12 col-sm-4">
+        <div className="d-flex gap-2 align-items-center col-12 col-sm-4 mb-2">
           <label htmlFor="alpha1">
             <i>&alpha;</i>:
           </label>
@@ -72,7 +72,7 @@ const Group_velocity = () => {
             </div>
           </div>
         </div>
-        <div className="d-flex gap-2 align-items-center col-12 col-sm-4">
+        <div className="d-flex gap-2 align-items-center col-12 col-sm-4 mb-2">
           <label htmlFor="gamma1">
             <i>&gamma;</i>:
           </label>

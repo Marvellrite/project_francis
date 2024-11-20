@@ -208,14 +208,17 @@ const useSubmitandReceive = () => {
           },
           body: JSON.stringify(inputValues),
         });
+        if (fetchedData.status !== 200) {
+          throw new Error("An Error Occured");
+        }
         const fetchedData_json: fetchedData_json = await fetchedData.json();
         console.log(fetchedData);
 
         setData(fetchedData_json);
       } catch (err) {
         setError(true);
+        return true;
         console.log(err);
-        alert(err);
       } finally {
         setLoading(false);
       }
@@ -231,7 +234,7 @@ const useSubmitandReceive = () => {
   //     }
   //   }, [])
 
-  return { loading, data, error, submitAndReceive };
+  return { setError, loading, data, error, submitAndReceive };
 };
 
 export default useSubmitandReceive;

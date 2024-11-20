@@ -97,28 +97,32 @@ def calculate(values: types.Speed_ratio_values)->dict:
                 FMSW = f"{FMSW:.{precision}g}"
                 # print('FMSW-->', FMSW)
                 # print('SMSW1-->', (C2 + Decimal(sqrt(C2**2 + 4*Va**2*Vs**2*Decimal(1-sinedAngle**2)))) )
-                try:
-                    SMSW1 = round(Decimal((2*Vs**2*(sqrdSine))))
-                    print('sqr2-->', C2**2 + 4*Va**2*Vs**2*(sqrdSine))
-                    print('sqr2.1-->', C2**2 )
-                    print('sqr2.2-->', 4*Va**2*Vs**2*(sqrdSine) )
-                    sqrt2 = sqrt(C2**2 + 4*Va**2*Vs**2*(sqrdSine))
+                SMSW1 = round(Decimal((2*Vs**2*(sqrdSine))))
+                print('sqr2-->', C2**2 + 4*Va**2*Vs**2*(sqrdSine))
+                print('sqr2.1-->', C2**2 )
+                print('sqr2.2-->', 4*Va**2*Vs**2*(sqrdSine) )
+                sqrt2 = sqrt(C2**2 + 4*Va**2*Vs**2*(sqrdSine))
+                if(angle==90):
+                    SMSW2 = Decimal(((Decimal(0.5) + C2 -  Decimal(sqrt2))))
+                else:
                     SMSW2 = Decimal(((C2 -  Decimal(sqrt2))))
-                    SMSW = round((SMSW1 / SMSW2), 10)
-                    print(SMSW1, '-->', SMSW2, 'For SMSW')
-                    print('sqrt2-->', sqrt2)
-                    print(SMSW, '-->', FMSW)
-                    print()
-                    print()
-                    SMSW = f"{SMSW:.{precision}g}"
-                except InvalidOperation:
+                SMSW = (SMSW1 / SMSW2)
+                if(SMSW==0):
                     SMSW = 0
-                    SMSW = f"{SMSW:.{precision}g}"
-                    print(SMSW1, '-->', SMSW2, 'For SMSW')
-                    print('sqrt2-->', sqrt2)
-                    print(SMSW, '-->', FMSW)
-                    print()
-                    print()
+                print(SMSW1, '-->', SMSW2, 'For SMSW')
+                print('sqrt2-->', sqrt2)
+                print(SMSW, '-->', FMSW)
+                print()
+                print()
+                SMSW = f"{SMSW:.{precision}g}"
+                # except InvalidOperation:
+                #     SMSW = 0
+                #     SMSW = f"{SMSW:.{precision}g}"
+                #     print(SMSW1, '-->', SMSW2, 'For SMSW')
+                #     print('sqrt2-->', sqrt2)
+                #     print(SMSW, '-->', FMSW)
+                #     print()
+                #     print()
                 # print('SMSW-->', SMSW)
                 FMSW_array.append(FMSW)
                 SMSW_array.append(SMSW)

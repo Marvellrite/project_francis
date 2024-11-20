@@ -52,7 +52,9 @@ const TAN_results = () => {
         <Table_1 caption_title="Summary of Results in the Photosphere">
           <thead>
             <tr>
-              <th rowSpan={2}>T(s)</th>
+              <th rowSpan={2} className="align-middle">
+                T(s)
+              </th>
               <th colSpan={2}>Lower Photosphere</th>
               <th colSpan={2}>Mid Photosphere</th>
               <th colSpan={2}>Upper Photosphere</th>
@@ -119,7 +121,9 @@ const TAN_results = () => {
         <Table_1 caption_title="Summary of Results in the Chromosphere">
           <thead>
             <tr>
-              <th rowSpan={2}>T(s)</th>
+              <th rowSpan={2} className="align-middle">
+                T(s)
+              </th>
               <th colSpan={2}>Lower Chromosphere</th>
               <th colSpan={2}>Mid Chromosphere</th>
               <th colSpan={2}>Upper Chromosphere</th>
@@ -186,7 +190,9 @@ const TAN_results = () => {
         <Table_1 caption_title="Summary of Results in the Corona">
           <thead>
             <tr>
-              <th rowSpan={2}>T(s)</th>
+              <th rowSpan={2} className="align-middle">
+                T(s)
+              </th>
               <th colSpan={2}>Lower Corona</th>
               <th colSpan={2}>Mid Corona</th>
               <th colSpan={2}>Upper Corona</th>

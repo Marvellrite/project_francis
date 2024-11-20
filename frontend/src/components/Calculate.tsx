@@ -3,7 +3,7 @@ import Themed_btn from "./building_blocks/Themed_btn.tsx";
 // import Vote_image from "../assets/vote/login_2.jpg";
 import Notify_Modal from "./Notify_modal.tsx";
 import { FaCircleXmark } from "react-icons/fa6";
-import { FaCheck } from "react-icons/fa6";
+import { FaPrint } from "react-icons/fa";
 import react, {
   useState,
   FormEvent,
@@ -25,22 +25,31 @@ import Tan from "./Calaculation_plaeholders/Tan.tsx";
 type contextType = {
   setDisplayTable: react.Dispatch<React.SetStateAction<boolean>>;
   data: fetchedData_json;
+  setError: React.Dispatch<React.SetStateAction<boolean>>;
 };
 export const Context = createContext<contextType | undefined>(undefined);
 
 const Calculate = () => {
   const [calculationType, setCalculationType] = useState<string>("speed_ratio");
-  const { loading, data, submitAndReceive } = useSubmitFetch();
+  const { setError, error, loading, data, submitAndReceive } = useSubmitFetch();
   const [displayTable, setDisplayTable] = useState(false);
   const [urlVariable, setUrlVariable] = useState("speed_ratio");
+  const [calculationTypeArray, setCalculationTypeArray] = useState([
+    true,
+    false,
+    false,
+  ]);
 
   useEffect(() => {
     switch (calculationType) {
       case "speed_ratio":
+        setCalculationTypeArray([true, false, false]);
         return setUrlVariable("speed_ratio");
       case "group_velocity":
+        setCalculationTypeArray([false, true, false]);
         return setUrlVariable("group_velocity");
       case "TAN":
+        setCalculationTypeArray([false, false, true]);
         return setUrlVariable("tan");
     }
   }, [calculationType]);
@@ -52,14 +61,13 @@ const Calculate = () => {
     formData.forEach((value, key) => {
       values[key] = value.toString();
     });
-    try {
-      console.log(values);
-      await submitAndReceive(`/api/${urlVariable}`, values);
+
+    console.log(values);
+    const eRror = await submitAndReceive(`/api/${urlVariable}`, values);
+    if (!eRror) {
       setDisplayTable(true);
-    } catch (err) {
-      alert(err);
-      console.log(err);
     }
+    return;
   };
 
   const renderCalcultionType = (calculationType: string) => {
@@ -74,7 +82,7 @@ const Calculate = () => {
   };
   return (
     <Context.Provider
-      value={{ setDisplayTable, data: data as fetchedData_json }}>
+      value={{ setDisplayTable, data: data as fetchedData_json, setError }}>
       <section className="form_section d-flex vh-100 align-items-center">
         <div className="container shadow-sm rounded bg-white position-relative">
           <div className="border border-2 border-prime border-top-0 border-bottom-0 h-100 overflow-y-auto">
@@ -100,15 +108,19 @@ const Calculate = () => {
                       onChange={(e) => {
                         setCalculationType(e.target.value);
                       }}>
-                      <option value="speed_ratio">
+                      <option
+                        value="speed_ratio"
+                        selected={calculationTypeArray[0]}>
                         The ratio of the phase speed of fast magnetsonic waves
                         to Alfven wave speed
                       </option>
-                      <option value="group_velocity">
+                      <option
+                        value="group_velocity"
+                        selected={calculationTypeArray[1]}>
                         The group velocity of Alfven wave with equilibrium mass
                         density
                       </option>
-                      <option value="TAN">
+                      <option value="TAN" selected={calculationTypeArray[2]}>
                         The TAN of propagation angle with period of oscillation
                         of Alfven wave
                       </option>
@@ -131,6 +143,11 @@ const Calculate = () => {
               <ViewResults calculationType={calculationType}></ViewResults>
             )}
           </div>
+          {error && (
+            <Notify_Modal color="red" icon={<FaCircleXmark></FaCircleXmark>}>
+              An Error Occured
+            </Notify_Modal>
+          )}
 
           {loading && <Loader>Calculating</Loader>}
         </div>
@@ -173,7 +190,9 @@ const ViewResults: FC<viewResultsType> = ({ calculationType }) => {
           </div> */}
 
       <div className="d-flex justify-content-between">
-        <div>Ba</div>
+        <button type="button" title="Click to print" className="btn p-0">
+          <FaPrint></FaPrint>
+        </button>
         <Close_button></Close_button>
       </div>
 
