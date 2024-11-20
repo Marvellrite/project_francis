@@ -1,33 +1,9 @@
 from pydantic import BaseModel
 from math import sin, sqrt, radians
+from decimal import Decimal, InvalidOperation
+from app.utils import types
 
-class Values(BaseModel):
-    speed_1st_iteration: int
-    speed_2nd_iteration: int
-    speed_3rd_iteration: int
-    speed_4th_iteration: int
-    speed_5th_iteration: int
-    va_lower_chromosphere: int
-    va_lower_corona: int
-    va_lower_photosphere: int
-    va_mid_chromosphere: int
-    va_mid_corona: int
-    va_mid_photosphere: int
-    va_upper_chromosphere: int
-    va_upper_corona: int
-    va_upper_photosphere: int
-    vs_lower_chromosphere: int
-    vs_lower_corona: int
-    vs_lower_photosphere: int
-    vs_mid_chromosphere: int
-    vs_mid_corona: int
-    vs_mid_photosphere: int
-    vs_upper_chromosphere: int
-    vs_upper_corona: int
-    vs_upper_photosphere: int
-
-
-def calculate(values: Values)->dict:
+def calculate(values: types.Speed_ratio_values)->dict:
     iterations = [values.speed_1st_iteration, values.speed_2nd_iteration, values.speed_3rd_iteration, values.speed_4th_iteration, values.speed_5th_iteration]
     atmospheres = {
         'photosphere': {
@@ -75,45 +51,82 @@ def calculate(values: Values)->dict:
     
     }
 
+    result = {'layers':{}}
     layers = {}
     precision = 5
 
     for key_layer, layer in atmospheres.items():
         layers[f"{key_layer}"] = {}
         # layer
+        print(key_layer)
         for key_position, position in layer.items(): 
+            print(key_position)
             # I am now inside the scope of lower, mid and upper
-            Vs = position['Vs']
-            Va = position['Va']
-            C2 = Vs**2 + Va**2 
+            Vs = Decimal(position['Vs'])
+            Va = Decimal(position['Va'])
+            # print('Vs-->', Vs)
+            # print('Va-->', Va)
+            C2 = round((Vs**2 + Va**2), 5)
+            print('C2-->', C2) 
             FMSW_array = []
             SMSW_array = []
-            print('/n')
-            print(layers)
             layers[f'{key_layer}'][f"{key_position}"] = {}
-            print(layers)
 
             for angle in iterations:
-                print('')
-                print('')
-                FMSW1 =(2*Vs**2*(1-(sin(radians(angle))**2)))
-                FMSW2 = ((C2 + sqrt(C2**2 + 4*Va**2*Vs**2*(1-(sin(radians(angle)))**2))))  
+                print(angle)
+                # print('') 422500 
+#                 print('')
+                sinedAngle = round(sin(radians(angle)), 10)
+                sqrdSine = Decimal(round((1-sinedAngle**2), 2))
+                print('sqrdSine-->', sqrdSine)
+                FMSW1 =(Decimal((2*Vs**2*(sqrdSine))))
+                print('Sine of angle-->', sinedAngle)
+                sqrt1 = sqrt(C2**2 + 4*Va**2*Vs**2*(sqrdSine))
+                FMSW2 = Decimal(((C2 + Decimal(sqrt1))))
                 print(FMSW1, '-->', FMSW2)
-                FMSW = (2*Vs**2*(1-(sin(radians(angle))**2)) / (C2 + sqrt(C2**2 + 4*Va**2*Vs**2*(1-(sin(radians(angle)))**2))))
+                FMSW = (FMSW1 / FMSW2)
+                print('FMSW without rounding -->', FMSW)
+                if(FMSW!=0):
+                    FMSW = round((FMSW1 / FMSW2), 10)
+                else:
+                    FMSW = 0
+
+                
+                print('sqrt1-->', sqrt1, 'For FMSW')
+                # print(FMSW)
                 FMSW = f"{FMSW:.{precision}g}"
-                print('FMSW-->', FMSW)
-                print('SMSW1-->', (C2 - sqrt(C2**2 + 4*Va**2*Vs**2*(1-(sin(radians(angle)))**2))) )
+                # print('FMSW-->', FMSW)
+                # print('SMSW1-->', (C2 + Decimal(sqrt(C2**2 + 4*Va**2*Vs**2*Decimal(1-sinedAngle**2)))) )
                 try:
-                    SMSW = (2*Vs**2*(1-(sin(radians(angle))**2)) / (C2 - sqrt(C2**2 + 4*Va**2*Vs**2*(1-(sin(radians(angle)))**2))))
+                    SMSW1 = round(Decimal((2*Vs**2*(sqrdSine))))
+                    print('sqr2-->', C2**2 + 4*Va**2*Vs**2*(sqrdSine))
+                    print('sqr2.1-->', C2**2 )
+                    print('sqr2.2-->', 4*Va**2*Vs**2*(sqrdSine) )
+                    sqrt2 = sqrt(C2**2 + 4*Va**2*Vs**2*(sqrdSine))
+                    SMSW2 = Decimal(((C2 -  Decimal(sqrt2))))
+                    SMSW = round((SMSW1 / SMSW2), 10)
+                    print(SMSW1, '-->', SMSW2, 'For SMSW')
+                    print('sqrt2-->', sqrt2)
+                    print(SMSW, '-->', FMSW)
+                    print()
+                    print()
                     SMSW = f"{SMSW:.{precision}g}"
-                except ZeroDivisionError:
+                except InvalidOperation:
                     SMSW = 0
-                print('SMSW-->', SMSW)
+                    SMSW = f"{SMSW:.{precision}g}"
+                    print(SMSW1, '-->', SMSW2, 'For SMSW')
+                    print('sqrt2-->', sqrt2)
+                    print(SMSW, '-->', FMSW)
+                    print()
+                    print()
+                # print('SMSW-->', SMSW)
                 FMSW_array.append(FMSW)
                 SMSW_array.append(SMSW)
-                print(angle)
-                print(sin(radians(angle)))
+                # print(angle)
+                # print(sin(radians(angle)))
             layers[f"{key_layer}"][f"{key_position}"]['FMSW'] = FMSW_array
             layers[f"{key_layer}"][f"{key_position}"]['SMSW'] = SMSW_array
 
-    return layers
+    result['layers'] = layers
+    result['iterations'] = iterations
+    return result

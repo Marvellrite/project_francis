@@ -74,8 +74,7 @@ const Calculate = () => {
   };
   return (
     <Context.Provider
-      value={{ setDisplayTable, data: data as fetchedData_json }}
-    >
+      value={{ setDisplayTable, data: data as fetchedData_json }}>
       <section className="form_section d-flex vh-100 align-items-center">
         <div className="container shadow-sm rounded bg-white position-relative">
           <div className="border border-2 border-prime border-top-0 border-bottom-0 h-100 overflow-y-auto">
@@ -92,8 +91,7 @@ const Calculate = () => {
 
                 <form
                   onSubmit={Submit_form}
-                  className="parameters_holder row mx-0 mt-3"
-                >
+                  className="parameters_holder row mx-0 mt-3">
                   <div>
                     <span className="fw-medium">Calculate for:</span>
                     <select
@@ -101,8 +99,7 @@ const Calculate = () => {
                       className="form-select"
                       onChange={(e) => {
                         setCalculationType(e.target.value);
-                      }}
-                    >
+                      }}>
                       <option value="speed_ratio">
                         The ratio of the phase speed of fast magnetsonic waves
                         to Alfven wave speed
@@ -124,8 +121,7 @@ const Calculate = () => {
                     <Themed_btn
                       btn_text="Calculate"
                       type="submit"
-                      outlined={false}
-                    ></Themed_btn>
+                      outlined={false}></Themed_btn>
                   </div>
                 </form>
               </div>
@@ -160,7 +156,7 @@ const ViewResults: FC<viewResultsType> = ({ calculationType }) => {
       "ViewResults must be used inside the Context Provider wrapper"
     );
   }
-  const chooseCalculationType = () => {
+  const chooseCalculationTypeResult = () => {
     switch (calculationType) {
       case "speed_ratio":
         return <Speed_ratio_results></Speed_ratio_results>;
@@ -181,7 +177,7 @@ const ViewResults: FC<viewResultsType> = ({ calculationType }) => {
         <Close_button></Close_button>
       </div>
 
-      {chooseCalculationType()}
+      {chooseCalculationTypeResult()}
     </div>
   );
 };

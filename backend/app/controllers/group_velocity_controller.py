@@ -1,89 +1,64 @@
 from pydantic import BaseModel
-from math import sin, sqrt
+from math import sin, sqrt, cos, degrees
 from decimal import Decimal
-
-class Values(BaseModel):
-    B0_1st_iteration: int|Decimal
-    B0_2nd_iteration: int|Decimal
-    B0_3rd_iteration: int|Decimal
-    B0_4th_iteration: int|Decimal
-    B0_5th_iteration: int|Decimal
-    P0_chromosphere: int|Decimal
-    P0_corona: int|Decimal
-    P0_troposphere: int|Decimal
-    beta_1st_iteration: int|Decimal
-    beta_2nd_iteration: int|Decimal
-    beta_3rd_iteration: int|Decimal
-    beta_4th_iteration: int|Decimal
-    beta_5th_iteration: int|Decimal
+from app.utils import types
 
 
-def calculate(values: Values)->dict:
-    iterations = [values.speed_1st_iteration, values.speed_2nd_iteration, values.speed_3rd_iteration, values.speed_4th_iteration, values.speed_5th_iteration]
+def calculate(values: types.Group_velocity)->dict:
+    iterations = [values.B0_1st_iteration, values.B0_2nd_iteration, values.B0_3rd_iteration, values.B0_4th_iteration, values.B0_5th_iteration]
+    BAG = {
+        'alpha':[values.alpha1, values.alpha2],
+        'beta':[values.beta1, values.beta2],
+        'gamma':[values.gamma1, values.gamma2]
+    }
+    mu = values.mu
     atmospheres = {
         'photosphere': {
-            'lower':{
-                'Vs': values.vs_lower_photosphere,
-                'Va': values.va_lower_photosphere
+            'lower':values.P0_lower_photosphere,
+            'mid': values.P0_mid_photosphere,
+            'upper':values.P0_upper_photosphere,
             },
-            'mid':{
-                'Vs': values.vs_mid_photosphere,
-                'Va': values.va_mid_photosphere
-            },
-            'upper':{
-                'Vs': values.vs_upper_photosphere,
-                'Va': values.va_upper_photosphere
-            }
-        },
         'chromosphere': {
-            'lower':{
-                'Vs': values.vs_lower_chromosphere,
-                'Va': values.va_lower_chromosphere
+            'lower':values.P0_lower_chromosphere,
+            'mid':values.P0_mid_chromosphere,
+            'upper':values.P0_upper_chromosphere,
             },
-            'mid':{
-                'Vs': values.vs_mid_chromosphere,
-                'Va': values.va_mid_chromosphere
-            },
-            'upper':{
-                'Vs': values.vs_upper_chromosphere,
-                'Va': values.va_upper_chromosphere
-            }
-        },
         'corona': {
-            'lower':{
-                'Vs': values.vs_lower_corona,
-                'Va': values.va_lower_corona
-            },
-            'mid':{
-                'Vs': values.vs_mid_corona,
-                'Va': values.va_mid_corona
-            },
-            'upper':{
-                'Vs': values.vs_upper_corona,
-                'Va': values.va_upper_corona
-            }
+            'lower':values.P0_lower_corona,
+            'mid':values.P0_mid_corona,
+            'upper':values.P0_upper_corona,
         },
     
     }
 
+    result = {}
+
     layers = {}
 
     for key_layer, layer in atmospheres.items():
-        # I am now in the scope of troposphere, chromosphere and corona
-        
-        for key_position, position in layer.items(): 
-            # I am now inside the scope of lower, mid and upper
-            Vs = position['Vs']
-            Va = position['Va']
-            C2 = Vs**2 + Va**2 
-            FMSW_array = []
-            SMSW_array = []
-            for angle in iterations:
-                FMSW = (2*Vs**2(1-(sin(angle))**2)) / (C2 + sqrt(C2**2 + 4*Va**2*Vs**2(1-(sin(angle)**2))))
-                SMSW = (2*Vs**2(1-(sin(angle))**2)) / (C2 - sqrt(C2**2 + 4*Va**2*Vs**2(1-(sin(angle)**2))))
-                FMSW_array.push(FMSW)
-                SMSW_array.push(SMSW)
-            layers[f"{layer}"][f"{position}"]['FMSW'] = FMSW
-            layers[f"{layer}"][f"{position}"]['SMSW'] = FMSW
+        layers[f"{key_layer}"] = {}
 
-    return layers
+        for key_position, position in layer.items(): 
+            # I am now inside the scope of lower, mid and upper where each holds single values of P0
+            P0 = position
+            layers[f'{key_layer}'][f"{key_position}"] = {}
+            layers[f'{key_layer}'][f"{key_position}"]['Vg'] = []
+
+            for iteration in iterations:
+                if(key_layer=='photosphere'):
+                    bag = BAG['alpha']
+                elif(key_layer=='chromosphere'):
+                    bag = BAG['beta']
+                else:
+                    bag = BAG['gamma']
+
+                B0 = iteration
+                Vg0 = (B0*Decimal(cos(degrees(bag[0]))))/Decimal(sqrt(mu*P0))
+                Vg1 = (B0*Decimal(cos(degrees(bag[1]))))/Decimal(sqrt(mu*P0))
+                Vg = {'Vg0':Vg0, 'Vg1':Vg1}
+                layers[f"{key_layer}"][f"{key_position}"]['Vg'].append(Vg)
+    result['layers'] = layers
+    result['iterations'] = iterations
+    result['BAG'] = BAG
+    print(result)
+    return result

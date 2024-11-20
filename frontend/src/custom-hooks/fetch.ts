@@ -5,50 +5,143 @@ type valuesType = {
   inputValues: { [key: string]: string };
 };
 
-export type fetchedData_json = {
-  photosphere: {
-    lower: {
-      FMSW: number[];
-      SMSW: number[];
+type speed_ratio_result = {
+  layers: {
+    photosphere: {
+      lower: {
+        FMSW: number[];
+        SMSW: number[];
+      };
+      mid: {
+        FMSW: number[];
+        SMSW: number[];
+      };
+      upper: {
+        FMSW: number[];
+        SMSW: number[];
+      };
     };
-    mid: {
-      FMSW: number[];
-      SMSW: number[];
+    chromosphere: {
+      lower: {
+        FMSW: number[];
+        SMSW: number[];
+      };
+      mid: {
+        FMSW: number[];
+        SMSW: number[];
+      };
+      upper: {
+        FMSW: number[];
+        SMSW: number[];
+      };
     };
-    upper: {
-      FMSW: number[];
-      SMSW: number[];
+    corona: {
+      lower: {
+        FMSW: number[];
+        SMSW: number[];
+      };
+      mid: {
+        FMSW: number[];
+        SMSW: number[];
+      };
+      upper: {
+        FMSW: number[];
+        SMSW: number[];
+      };
     };
   };
-  chromosphere: {
-    lower: {
-      FMSW: number[];
-      SMSW: number[];
+  iterations: number[];
+};
+
+type group_ratio_result = {
+  layers: {
+    photosphere: {
+      lower: {
+        Vg: { Vg0: number; Vg1: number }[];
+      };
+      mid: {
+        Vg: { Vg0: number; Vg1: number }[];
+      };
+      upper: {
+        Vg: { Vg0: number; Vg1: number }[];
+      };
     };
-    mid: {
-      FMSW: number[];
-      SMSW: number[];
+    chromosphere: {
+      lower: {
+        Vg: { Vg0: number; Vg1: number }[];
+      };
+      mid: {
+        Vg: { Vg0: number; Vg1: number }[];
+      };
+      upper: {
+        Vg: { Vg0: number; Vg1: number }[];
+      };
     };
-    upper: {
-      FMSW: number[];
-      SMSW: number[];
+    corona: {
+      lower: {
+        Vg: { Vg0: number; Vg1: number }[];
+      };
+      mid: {
+        Vg: { Vg0: number; Vg1: number }[];
+      };
+      upper: {
+        Vg: { Vg0: number; Vg1: number }[];
+      };
     };
   };
-  corona: {
-    lower: {
-      FMSW: number[];
-      SMSW: number[];
-    };
-    mid: {
-      FMSW: number[];
-      SMSW: number[];
-    };
-    upper: {
-      FMSW: number[];
-      SMSW: number[];
-    };
+  iterations: number[];
+  BAG: {
+    alpha: number[];
+    beta: number[];
+    gamma: number[];
   };
 };
+
+type tan_result = {
+  layers: {
+    photosphere: {
+      lower: {
+        angles: number[];
+      };
+      mid: {
+        angles: number[];
+      };
+      upper: {
+        angles: number[];
+      };
+    };
+    chromosphere: {
+      lower: {
+        angles: number[];
+      };
+      mid: {
+        angles: number[];
+      };
+      upper: {
+        angles: number[];
+      };
+    };
+    corona: {
+      lower: {
+        angles: number[];
+      };
+      mid: {
+        angles: number[];
+      };
+      upper: {
+        angles: number[];
+      };
+    };
+  };
+  iterations: {
+    T: number;
+    lambda: number;
+  }[];
+};
+
+export type fetchedData_json = speed_ratio_result &
+  group_ratio_result &
+  tan_result;
 
 const useSubmitandReceive = () => {
   const [loading, setLoading] = useState(false);

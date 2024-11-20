@@ -1,40 +1,9 @@
 from pydantic import BaseModel
 from math import atan, degrees
 from decimal import Decimal
+from app.utils import types
 
-class Values(BaseModel):
-    T_1st_iteration: Decimal
-    T_2nd_iteration: Decimal
-    T_3rd_iteration: Decimal
-    T_4th_iteration: Decimal
-    T_5th_iteration: Decimal
-    Va_chromosphere_upper: Decimal
-    Va_lower_chromosphere: Decimal
-    Va_lower_corona: Decimal
-    Va_lower_photosphere: Decimal
-    Va_mid_chromosphere: Decimal
-    Va_mid_corona: Decimal
-    Va_photosphere_mid: Decimal
-    Va_photosphere_upper: Decimal
-    Va_upper_corona: Decimal
-    Vp_chromosphere_upper: Decimal
-    Vp_lower_chromosphere: Decimal
-    Vp_lower_corona: Decimal
-    Vp_lower_photosphere: Decimal
-    Vp_mid_chromosphere: Decimal
-    Vp_mid_corona: Decimal
-    Vp_photosphere_mid: Decimal
-    Vp_photosphere_upper: Decimal
-    Vp_upper_corona: Decimal
-    lambda_1st_iteration: Decimal
-    lambda_2nd_iteration: Decimal
-    lambda_3rd_iteration: Decimal
-    lambda_4th_iteration: Decimal
-    lambda_5th_iteration: Decimal
-
-
-
-def calculate(values: Values)->dict:
+def calculate(values: types.tan)->dict:
     iterations = [{'T':values.T_1st_iteration, 'lambda': values.lambda_1st_iteration}, {'T':values.T_2nd_iteration, 'lambda': values.lambda_2nd_iteration}, {'T':values.T_3rd_iteration, 'lambda': values.lambda_3rd_iteration}, {'T':values.T_4th_iteration, 'lambda': values.lambda_4th_iteration}, {'T':values.T_5th_iteration, 'lambda': values.lambda_5th_iteration}]
     atmospheres = {
         'photosphere': {
@@ -82,6 +51,7 @@ def calculate(values: Values)->dict:
     
     }
 
+    result = {}
     layers = {}
 
     for key_layer, layer in atmospheres.items():
@@ -101,10 +71,12 @@ def calculate(values: Values)->dict:
                 print(key_layer, key_position, )
                 print('SqrdInL -->', inL**2)
                 print('Lambda -->', lambDa)
-                sqrdDecimal = (1-(inL)**2).sqrt()
+                sqrdDecimal = abs(1-(inL)**2).sqrt()
                 angle = atan((T*Va/lambDa)*sqrdDecimal)
-                angle = degrees(angle)
+                angle = round(degrees(angle), 3)
                 angles_array.append(angle)
             layers[f"{key_layer}"][f"{key_position}"]['angles'] = angles_array
-    print(layers)
-    return layers
+    result['layers'] = layers
+    result['iterations'] = iterations
+    print(result)
+    return result

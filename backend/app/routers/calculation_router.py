@@ -16,6 +16,10 @@ def get_speed_ratio(item: types.Speed_ratio_values):
 # def get_tan():
 #     return tan()
 
-@router.post('/tan')
+@router.post('/group_velocity')
 def get_group_velocity(item: types.Group_velocity):
+    return group_velocity_controller.calculate(item)
+
+@router.post('/tan')
+def get_group_velocity(item: types.tan):
     return tan_controller.calculate(item)
