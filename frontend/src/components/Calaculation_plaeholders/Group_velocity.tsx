@@ -262,7 +262,7 @@ const Group_velocity = () => {
             title={
               <div>
                 Values for <i>B</i>
-                <sub>0</sub> Per Iteration (Troposphere)
+                <sub>0</sub> Per Iteration (Photosphere)
               </div>
             }>
             <div className="mx-3 mt-4 mb-3">
@@ -350,12 +350,12 @@ const Group_velocity = () => {
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
                     <label
                       className="fw-medium"
-                      htmlFor="Troposphere_mid_B0_1st_iteration">
+                      htmlFor="Photosphere_mid_B0_1st_iteration">
                       1<sup>st</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="Troposphere_mid_B0_1st_iteration"
-                      name="Troposphere_mid_B0_1st_iteration"
+                      id="Photosphere_mid_B0_1st_iteration"
+                      name="Photosphere_mid_B0_1st_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
@@ -365,12 +365,12 @@ const Group_velocity = () => {
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
                     <label
                       className="fw-medium"
-                      htmlFor="Troposphere_mid_B0_2nd_iteration">
+                      htmlFor="Photosphere_mid_B0_2nd_iteration">
                       2<sup>nd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="Troposphere_mid_B0_2nd_iteration"
-                      name="Troposphere_mid_B0_2nd_iteration"
+                      id="Photosphere_mid_B0_2nd_iteration"
+                      name="Photosphere_mid_B0_2nd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
@@ -379,12 +379,12 @@ const Group_velocity = () => {
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
                     <label
                       className="fw-medium"
-                      htmlFor="Troposphere_mid_B0_3rd_iteration">
+                      htmlFor="Photosphere_mid_B0_3rd_iteration">
                       3<sup>rd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="Troposphere_mid_B0_3rd_iteration"
-                      name="Troposphere_mid_B0_3rd_iteration"
+                      id="Photosphere_mid_B0_3rd_iteration"
+                      name="Photosphere_mid_B0_3rd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
@@ -394,12 +394,12 @@ const Group_velocity = () => {
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
                     <label
                       className="fw-medium"
-                      htmlFor="Troposphere_mid_B0_4th_iteration">
+                      htmlFor="Photosphere_mid_B0_4th_iteration">
                       4<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="Troposphere_mid_B0_4th_iteration"
-                      name="Troposphere_mid_B0_4th_iteration"
+                      id="Photosphere_mid_B0_4th_iteration"
+                      name="Photosphere_mid_B0_4th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
@@ -409,12 +409,12 @@ const Group_velocity = () => {
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
                     <label
                       className="fw-medium"
-                      htmlFor="Troposphere_mid_B0_5th_iteration">
+                      htmlFor="Photosphere_mid_B0_5th_iteration">
                       5<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="Troposphere_mid_B0_5th_iteration"
-                      name="Troposphere_mid_B0_5th_iteration"
+                      id="Photosphere_mid_B0_5th_iteration"
+                      name="Photosphere_mid_B0_5th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
@@ -429,12 +429,12 @@ const Group_velocity = () => {
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
                     <label
                       className="fw-medium"
-                      htmlFor="Troposphere_upper_B0_1st_iteration">
+                      htmlFor="Photosphere_upper_B0_1st_iteration">
                       1<sup>st</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="Troposphere_upper_B0_1st_iteration"
-                      name="Troposphere_upper_B0_1st_iteration"
+                      id="Photosphere_upper_B0_1st_iteration"
+                      name="Photosphere_upper_B0_1st_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
@@ -444,12 +444,12 @@ const Group_velocity = () => {
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
                     <label
                       className="fw-medium"
-                      htmlFor="Troposphere_upper_B0_2nd_iteration">
+                      htmlFor="Photosphere_upper_B0_2nd_iteration">
                       2<sup>nd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="Troposphere_upper_B0_2nd_iteration"
-                      name="Troposphere_upper_B0_2nd_iteration"
+                      id="Photosphere_upper_B0_2nd_iteration"
+                      name="Photosphere_upper_B0_2nd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
@@ -458,12 +458,12 @@ const Group_velocity = () => {
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
                     <label
                       className="fw-medium"
-                      htmlFor="Troposphere_upper_B0_3rd_iteration">
+                      htmlFor="Photosphere_upper_B0_3rd_iteration">
                       3<sup>rd</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="Troposphere_upper_B0_3rd_iteration"
-                      name="Troposphere_upper_B0_3rd_iteration"
+                      id="Photosphere_upper_B0_3rd_iteration"
+                      name="Photosphere_upper_B0_3rd_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
@@ -473,12 +473,12 @@ const Group_velocity = () => {
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
                     <label
                       className="fw-medium"
-                      htmlFor="Troposphere_upper_B0_4th_iteration">
+                      htmlFor="Photosphere_upper_B0_4th_iteration">
                       4<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="Troposphere_upper_B0_4th_iteration"
-                      name="Troposphere_upper_B0_4th_iteration"
+                      id="Photosphere_upper_B0_4th_iteration"
+                      name="Photosphere_upper_B0_4th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}
@@ -488,12 +488,12 @@ const Group_velocity = () => {
                   <div className="d-flex align-items-center gap-1 col-12 col-sm-4">
                     <label
                       className="fw-medium"
-                      htmlFor="Troposphere_upper_B0_5th_iteration">
+                      htmlFor="Photosphere_upper_B0_5th_iteration">
                       5<sup>th</sup>:
                     </label>{" "}
                     <Label_input_2
-                      id="Troposphere_upper_B0_5th_iteration"
-                      name="Troposphere_upper_B0_5th_iteration"
+                      id="Photosphere_upper_B0_5th_iteration"
+                      name="Photosphere_upper_B0_5th_iteration"
                       required={true}
                       type="number"
                       unit={<i>G</i>}

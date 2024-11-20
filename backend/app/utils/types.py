@@ -27,11 +27,51 @@ class Speed_ratio_values(BaseModel):
     vs_upper_photosphere:Decimal
 
 class Group_velocity(BaseModel):
-    B0_1st_iteration: Decimal 
-    B0_2nd_iteration: Decimal 
-    B0_3rd_iteration: Decimal 
-    B0_4th_iteration: Decimal 
-    B0_5th_iteration: Decimal 
+    Chromosphere_lower_B0_1st_iteration: Decimal
+    Chromosphere_lower_B0_2nd_iteration: Decimal
+    Chromosphere_lower_B0_3rd_iteration: Decimal
+    Chromosphere_lower_B0_4th_iteration: Decimal
+    Chromosphere_lower_B0_5th_iteration: Decimal
+    Chromosphere_mid_B0_1st_iteration: Decimal
+    Chromosphere_mid_B0_2nd_iteration: Decimal
+    Chromosphere_mid_B0_3rd_iteration: Decimal
+    Chromosphere_mid_B0_4th_iteration: Decimal
+    Chromosphere_mid_B0_5th_iteration: Decimal
+    Chromosphere_upper_B0_1st_iteration: Decimal
+    Chromosphere_upper_B0_2nd_iteration: Decimal
+    Chromosphere_upper_B0_3rd_iteration: Decimal
+    Chromosphere_upper_B0_4th_iteration: Decimal
+    Chromosphere_upper_B0_5th_iteration: Decimal
+    Corona_lower_B0_1st_iteration: Decimal
+    Corona_lower_B0_2nd_iteration: Decimal
+    Corona_lower_B0_3rd_iteration: Decimal
+    Corona_lower_B0_4th_iteration: Decimal
+    Corona_lower_B0_5th_iteration: Decimal
+    Corona_mid_B0_1st_iteration: Decimal
+    Corona_mid_B0_2nd_iteration: Decimal
+    Corona_mid_B0_3rd_iteration: Decimal
+    Corona_mid_B0_4th_iteration: Decimal
+    Corona_mid_B0_5th_iteration: Decimal
+    Corona_upper_B0_1st_iteration: Decimal
+    Corona_upper_B0_2nd_iteration: Decimal
+    Corona_upper_B0_3rd_iteration: Decimal
+    Corona_upper_B0_4th_iteration: Decimal
+    Corona_upper_B0_5th_iteration: Decimal
+    Photosphere_lower_B0_1st_iteration: Decimal
+    Photosphere_lower_B0_2nd_iteration: Decimal
+    Photosphere_lower_B0_3rd_iteration: Decimal
+    Photosphere_lower_B0_4th_iteration: Decimal
+    Photosphere_lower_B0_5th_iteration: Decimal
+    Photosphere_mid_B0_1st_iteration: Decimal
+    Photosphere_mid_B0_2nd_iteration: Decimal
+    Photosphere_mid_B0_3rd_iteration: Decimal
+    Photosphere_mid_B0_4th_iteration: Decimal
+    Photosphere_mid_B0_5th_iteration: Decimal
+    Photosphere_upper_B0_1st_iteration: Decimal
+    Photosphere_upper_B0_2nd_iteration: Decimal
+    Photosphere_upper_B0_3rd_iteration: Decimal
+    Photosphere_upper_B0_4th_iteration: Decimal
+    Photosphere_upper_B0_5th_iteration: Decimal
     P0_lower_chromosphere: Decimal 
     P0_lower_corona: Decimal 
     P0_lower_photosphere: Decimal 
@@ -48,6 +88,9 @@ class Group_velocity(BaseModel):
     gamma1: Decimal 
     gamma2: Decimal
     mu: Decimal 
+
+
+
 
 class tan(BaseModel):
     T_1st_iteration:Decimal

@@ -57,39 +57,88 @@ type group_ratio_result = {
   layers: {
     photosphere: {
       lower: {
-        Vg: { Vg0: number; Vg1: number }[];
+        Vg: {
+          Vg0: number;
+          Vg1: number;
+        }[];
       };
       mid: {
-        Vg: { Vg0: number; Vg1: number }[];
+        Vg: {
+          Vg0: number;
+          Vg1: number;
+        }[];
       };
       upper: {
-        Vg: { Vg0: number; Vg1: number }[];
+        Vg: {
+          Vg0: number;
+          Vg1: number;
+        }[];
       };
     };
     chromosphere: {
       lower: {
-        Vg: { Vg0: number; Vg1: number }[];
+        Vg: {
+          Vg0: number;
+          Vg1: number;
+        }[];
       };
       mid: {
-        Vg: { Vg0: number; Vg1: number }[];
+        Vg: {
+          Vg0: number;
+          Vg1: number;
+        }[];
       };
       upper: {
-        Vg: { Vg0: number; Vg1: number }[];
+        Vg: {
+          Vg0: number;
+          Vg1: number;
+        }[];
       };
     };
     corona: {
       lower: {
-        Vg: { Vg0: number; Vg1: number }[];
+        Vg: {
+          Vg0: number;
+          Vg1: number;
+        }[];
       };
       mid: {
-        Vg: { Vg0: number; Vg1: number }[];
+        Vg: {
+          Vg0: number;
+          Vg1: number;
+        }[];
       };
       upper: {
-        Vg: { Vg0: number; Vg1: number }[];
+        Vg: {
+          Vg0: number;
+          Vg1: number;
+        }[];
       };
     };
   };
-  iterations: number[];
+  iterations: {
+    lower: {
+      "1st": number;
+      "2nd": number;
+      "3rd": number;
+      "4th": number;
+      "5th": number;
+    };
+    mid: {
+      "1st": number;
+      "2nd": number;
+      "3rd": number;
+      "4th": number;
+      "5th": number;
+    };
+    upper: {
+      "1st": number;
+      "2nd": number;
+      "3rd": number;
+      "4th": number;
+      "5th": number;
+    };
+  }[];
   BAG: {
     alpha: number[];
     beta: number[];
