@@ -1,8 +1,7 @@
 import "./styles/_App.scss";
 import "./styles/_shared.scss";
 
-import Login from "./components/Login.tsx";
-import Register from "./components/Calculate.tsx";
+import Calculate from "./components/Calculate.tsx";
 // import Navbar from "./components/Navbar.tsx";
 
 import {
@@ -17,8 +16,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route element={<Login />} path="/login" />
-        <Route element={<Register />} path="/calculate" />
+        <Route element={<Calculate />} path="/calculate" />
       </Routes>
     </Router>
   );

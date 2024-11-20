@@ -1,4 +1,3 @@
-import React from "react";
 import Accordion_toggler_icon from "./Accordion_toggler_icon";
 
 const Border_titled_container = () => {

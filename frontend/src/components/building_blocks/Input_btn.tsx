@@ -20,7 +20,7 @@ const Input_btn: FC<input_and_btn_type> = (props) => {
           title="Add Mat. No."
           placeholder="Enter Mat. No"
         />
-        <Themed_btn {...props}></Themed_btn>
+        <Themed_btn type="button" {...props}></Themed_btn>
       </div>{" "}
     </div>
   );
