@@ -21,6 +21,7 @@ import useSubmitFetch, { fetchedData_json } from "../custom-hooks/fetch.ts";
 import Speed_ratio from "./Calaculation_plaeholders/Speed_ratio.tsx";
 import Group_velocity from "./Calaculation_plaeholders/Group_velocity.tsx";
 import Tan from "./Calaculation_plaeholders/Tan.tsx";
+import { FaWhatsapp, FaPhone } from "react-icons/fa6";
 
 type contextType = {
   setDisplayTable: react.Dispatch<React.SetStateAction<boolean>>;
@@ -39,6 +40,10 @@ const Calculate = () => {
     false,
     false,
   ]);
+
+  const phoneNumber = "+2349060188354";
+  const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, "")}`;
+
 
   useEffect(() => {
     switch (calculationType) {
@@ -83,7 +88,7 @@ const Calculate = () => {
   return (
     <Context.Provider
       value={{ setDisplayTable, data: data as fetchedData_json, setError }}>
-      <section className="form_section d-flex vh-100 align-items-center">
+      <section className="form_section d-flex vh-100 align-items-center flex-column ">
         <div className="container shadow-sm rounded bg-white position-relative">
           <div className="border border-2 border-prime border-top-0 border-bottom-0 h-100 overflow-y-auto">
             {!displayTable && (
@@ -136,6 +141,25 @@ const Calculate = () => {
                       outlined={false}></Themed_btn>
                   </div>
                 </form>
+
+
+          <div className=" py-5 builder">
+           <div className=" text-center ">Built By <span className="fw-semibold text-muted ">Ozuru Melody</span></div> 
+           <div className=" mt-2 gap-3 d-flex justify-content-center gap-2 align-items-center ">
+
+              <a className=" d-flex gap-1 text-decoration-none text-muted whatsapp" href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer" ><FaWhatsapp className="fs-4"></FaWhatsapp>
+              <span>WhatsApp</span>
+              </a>
+
+                <a className=" d-flex gap-1 text-decoration-none text-muted phone" href={`tel:${phoneNumber}`}>
+                <span className="text-muted gap-2"><FaPhone></FaPhone></span> <span className="text-muted fw-semibold">+234 9060188354</span>
+
+                </a>
+            </div>
+           
+        </div>
               </div>
             )}
 
@@ -143,6 +167,10 @@ const Calculate = () => {
               <ViewResults calculationType={calculationType}></ViewResults>
             )}
           </div>
+
+          
+
+
           {error && (
             <Notify_Modal color="red" icon={<FaCircleXmark></FaCircleXmark>}>
               An Error Occured
@@ -150,7 +178,9 @@ const Calculate = () => {
           )}
 
           {loading && <Loader>Calculating</Loader>}
+
         </div>
+ 
 
         {/* <Notify_Modal icon={<FaCircleXmark></FaCircleXmark>} color='rgb(220, 53, 69)'>
         User ID not found.

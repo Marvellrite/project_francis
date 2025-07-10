@@ -14,11 +14,14 @@ import {
 
 const App = () => {
   return (
+  <>
     <Router>
       <Routes>
         <Route element={<Calculate />} path="/calculate" />
       </Routes>
     </Router>
+
+  </>
   );
 };
 
